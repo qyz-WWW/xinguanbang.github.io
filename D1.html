@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!-- 更新日期：2022-11-17 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信管帮-成员总览</title>
+    <link rel="stylesheet" href="../css/D1.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <!-- left -->
+        <div class="logoBox"></div>
+        <!-- right -->
+        <div class="user">
+            <div class="uimg"></div>
+            <span class="uname"><a href="">信管201张辉</a></span>
+            <button class="udo" id="udo" onclick=""></button>
+
+
+            <!-- 隐藏列表 -->
+        <ul class="ul1">
+            <li class="li li1"><a href="">切换账号</a></li>
+            <li class="li li2"><a href="./login.html">退出</a></li>
+            <li class="li li3"><a href="">咨询</a></li>
+        </ul>
+       
+        <script>
+            var udo = document.querySelector(".udo")
+            var ul1 = document.querySelector(".ul1")
+            udo.onmouseover = function(){
+                ul1.style.display="block"
+            }
+            udo.onmouseout = function(){
+                ul1.style.display="none"
+            }
+
+
+            ul1.onmouseover = function(){
+                ul1.style.display="block"
+            }
+            ul1.onmouseout = function(){
+                ul1.style.display="none"
+            }
+        </script>
+
+            
+        </div>
+
+        
+    </header>
+    <!-- section -->
+    <section>
+        <!-- leftcontainer -->
+        <div class="leftcontainer">
+            <!--  -->
+            <div class="homebox">
+            <div class="home">
+                <div class="homeicon"></div>
+                <p><a href="./index.jsp" style="color: #ffffff; text-decoration: none;">首页</a></p>
+            </div> 
+            <script>
+                document.querySelector(".home").onclick=function(){
+                    window.location.href="./index.jsp"
+                }
+            </script>   
+            </div>
+            
+            
+            <ul class="ul2">
+                <!-- option1 -->
+                <li class="li pli pli1 on" id="pli1">
+                    <div class="icon_p">
+                        <div class="icon"></div>
+                        <p>青年大学习</p>
+                        <div class="icon2"></div>
+                    </div>
+                </li>
+                <li class="li cli cli1 cli1_1"><a href="./A1.jsp">数据查询</a></li>
+                <li class="li cli cli1 cli1_2"><a href="./A2.jsp">数据汇总</a></li>
+                
+                <!-- <li class="li cli cli1 cli1_3">修改数据</li>
+                <li class="li cli cli1 cli1_4">查询数据</li> -->
+                <script>
+                    var cli1_1 = document.querySelector(".cli1_1")
+                    var cli1_2 = document.querySelector(".cli1_2")
+                    cli1_1.onclick=function(){
+                        window.location.href="./A1.jsp"
+                    }
+                    cli1_2.onclick=function(){
+                        window.location.href="./A2.jsp"
+                    }
+                    
+                </script>
+                <!-- option2 -->
+                <li class="li pli pli2 on" id="pli2">
+                    <div class="icon_p">
+                        <div class="icon"></div>
+                        <p>学习强国</p>
+                        <div class="icon2"></div>
+                    </div>
+                </li>
+                <li class="li cli cli2 cli2_1"><a href="./B1.jsp">数据查询</a></li>
+                <li class="li cli cli2 cli2_2"><a href="./B2.jsp">数据汇总</a></li>
+                <!-- <li class="li cli cli2 cli2_3">cli</li>
+                <li class="li cli cli2 cli2_4">cli</li> -->
+                <script>
+                    var cli2_1 = document.querySelector(".cli2_1")
+                    var cli2_2 = document.querySelector(".cli2_2")
+                    cli2_1.onclick=function(){
+                        window.location.href="./B1.jsp"
+                    }
+                    cli2_2.onclick=function(){
+                        window.location.href="./B2.jsp"
+                    }
+                </script>
+                
+                
+                
+                
+                
+                <!-- option3 -->
+                <li class="li pli pli3 on" id="pli3">
+                    <div class="icon_p">
+                        <div class="icon"></div>
+                        <p>组织考核</p>
+                        <div class="icon2"></div>
+                    </div>
+                </li>
+                <li class="li cli cli3 cli3_1"><a href="./C1.jsp">数据总览</a></li>
+                <!-- <li class="li cli cli3 cli3_2">cli</li>
+                <li class="li cli cli3 cli3_3">cli</li>
+                <li class="li cli cli3 cli3_4">cli</li> -->
+                <script>
+                    var cli3_1 = document.querySelector(".cli3_1")
+                    cli3_1.onclick=function(){
+                        window.location.href="./C1.jsp"
+                    }
+                    
+                </script>
+                
+                
+                <!-- option4 -->
+                <li class="li pli pli4 on" id="pli4">
+                    <div class="icon_p">
+                        <div class="icon"></div>
+                        <p>成员信息</p>
+                        <div class="icon2"></div>
+                    </div>
+                </li>
+                <li class="li cli cli4 cli4_1"><a href="./D1.jsp">成员总览</a></li>
+                <!-- <li class="li cli cli4 cli4_2">cli</li>
+                <li class="li cli cli4 cli4_3">cli</li>
+                <li class="li cli cli4 cli4_4">cli</li> -->
+                <script>
+                    var cli4_1 = document.querySelector(".cli4_1")
+                    cli4_1.onclick=function(){
+                        window.location.href="./D1.jsp"
+                    }
+                    
+                </script>
+                <!-- option5 -->
+                <!-- <li class="li pli pli5 on" id="pli5">
+                    <div class="icon_p">
+                        <div class="icon"></div>
+                        <p>option5</p>
+                        <div class="icon2"></div>
+                    </div>
+                </li>
+                <li class="li cli cli5 cli5_1">cli</li>
+                <li class="li cli cli5 cli5_2">cli</li>
+                <li class="li cli cli5 cli5_3">cli</li>
+                <li class="li cli cli5 cli5_4">cli</li> -->
+               
+                
+                
+            </ul>
+<!-- option点击事件 -->
+            <!-- option1点击事件 -->
+            <script>
+                //点击option1，收起cli
+                var pli1 = document.getElementById("pli1")
+                var cli1 = document.querySelectorAll("li.cli1")
+                var icon12 = document.querySelector(".ul2 .pli1 .icon2")
+                pli1.onclick = function(){
+                    if (pli1.className == "li pli pli1 on"){
+                        for (var i = 0; i < cli1.length; i++){
+                        cli1[i].style.display = "none"
+                        }
+                        icon12.style.backgroundImage = "url(../img/off.png)"                        
+                        pli1.className = "li pli pli1 off" 
+                    } else{
+                        for (var i = 0; i < cli1.length; i++){
+                            cli1[i].style.display = ""
+                            }
+                            icon12.style.backgroundImage = "url(../img/on.png)"
+                            pli1.className="li pli pli1 on"
+                    }  
+                }
+            </script>
+            <!-- option2点击事件 -->
+            <script>
+                //点击option2，收起cli
+                var pli2 = document.getElementById("pli2")
+                var cli2 = document.querySelectorAll("li.cli2")
+                var icon22 = document.querySelector(".ul2 .pli2 .icon2")
+                pli2.onclick = function(){
+                    if (pli2.className == "li pli pli2 on"){
+                        for (var i = 0; i < cli2.length; i++){
+                        cli2[i].style.display = "none"
+                        }
+                        icon22.style.backgroundImage = "url(../img/off.png)"                        
+                        pli2.className = "li pli pli2 off" 
+                    } else{
+                        for (var i = 0; i < cli2.length; i++){
+                            cli2[i].style.display = ""
+                            }
+                            icon22.style.backgroundImage = "url(../img/on.png)"
+                            pli2.className="li pli pli2 on"
+                    }  
+                }
+            </script>
+            <!-- option3点击事件 -->
+            <script>
+                //点击option3，收起cli
+                var pli3 = document.getElementById("pli3")
+                var cli3 = document.querySelectorAll("li.cli3")
+                var icon32 = document.querySelector(".ul2 .pli3 .icon2")
+                pli3.onclick = function(){
+                    if (pli3.className == "li pli pli3 on"){
+                        for (var i = 0; i < cli3.length; i++){
+                        cli3[i].style.display = "none"
+                        }
+                        icon32.style.backgroundImage = "url(../img/off.png)"                        
+                        pli3.className = "li pli pli3 off" 
+                    } else{
+                        for (var i = 0; i < cli3.length; i++){
+                            cli3[i].style.display = ""
+                            }
+                            icon32.style.backgroundImage = "url(../img/on.png)"
+                            pli3.className="li pli pli3 on"
+                    }  
+                }
+            </script>
+            <!-- option4点击事件 -->
+             <script>
+                //点击option4，收起cli
+                var pli4 = document.getElementById("pli4")
+                var cli4 = document.querySelectorAll("li.cli4")
+                var icon42 = document.querySelector(".ul2 .pli4 .icon2")
+                pli4.onclick = function(){
+                    if (pli4.className == "li pli pli4 on"){
+                        for (var i = 0; i < cli4.length; i++){
+                        cli4[i].style.display = "none"
+                        }
+                        icon42.style.backgroundImage = "url(../img/off.png)"                        
+                        pli4.className = "li pli pli4 off" 
+                    } else{
+                        for (var i = 0; i < cli4.length; i++){
+                            cli4[i].style.display = ""
+                            }
+                            icon42.style.backgroundImage = "url(../img/on.png)"
+                            pli4.className="li pli pli4 on"
+                    }  
+                }
+            </script> 
+            <!-- option5点击事件 -->
+            <!-- <script>
+                //点击option5，收起cli
+                var pli5 = document.getElementById("pli5")
+                var cli5 = document.querySelectorAll("li.cli5")
+                var icon52 = document.querySelector(".ul2 .pli5 .icon2")
+                pli5.onclick = function(){
+                    if (pli5.className == "li pli pli5 on"){
+                        for (var i = 0; i < cli5.length; i++){
+                        cli5[i].style.display = "none"
+                        }
+                        icon52.style.backgroundImage = "url(../img/off.png)"                        
+                        pli5.className = "li pli pli5 off" 
+                    } else{
+                        for (var i = 0; i < cli1.length; i++){
+                            cli5[i].style.display = ""
+                            }
+                            icon52.style.backgroundImage = "url(../img/on.png)"
+                            pli5.className="li pli pli5 on"
+                    }  
+                }
+            </script> -->
+        </div>
+
+        <!-- rightcontainer -->
+        <div class="rightcontainer">
+           
+            <div class="box">
+                <!-- 上盒子 -->
+                <div class="box1">
+                    <div style="color: #4099ff;">成员总览</div>
+                </div>
+                <!-- 下盒子 -->
+                <div class="box2">
+                    <!-- 右下盒子内容部分 -->
+                    <ul  style="border: 1px solid red; width: 95%; height: 100%;" class="user_list">
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); background: #f6f7f8; width: 100%; display: flex; justify-content: space-around;">
+                            <span style="width: 110px; display: flex; justify-content: center;">用户</span>
+                            <span>状态</span>
+                            <span>操作</span>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">莫运旺</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">杨松江</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">陈垄松</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">张辉</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">孙戎</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">夏时康</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">卢豪</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">王宇毅</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">陈信杰</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">武悦</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">王明扬</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">夏晨</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">柯垚</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">王立攀</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">徐彩红</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">牛淳贤</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">刘晓彦</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">韩慧珍</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">柯美琦</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">徐美荣</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        <li style="height: 60px; line-height: 60px; border-bottom: 1px solid rgba(128, 128, 128, 0.129); width: 100%; display: flex; justify-content: space-around; width: 100%; display: flex; justify-content: space-around;">
+                            <div style="display:flex; align-items: center;">
+                                <div class="myw" style="width: 50px; height: 50px;border-radius: 50%;background: green;"></div>
+                                <span style="width: 50px; margin-left: 10px;">王鸿宇</span>
+                            </div>
+                            <span style="font-weight: 700; color: green;">正常</span>
+                            <a href="">查看</a>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                   
+                   <script>
+                    var weekbox = document.querySelector(".weekbox")
+                    var monthbox = document.querySelector(".monthbox")
+                    var xueqibox = document.querySelector(".xueqibox")
+                    var zdybox = document.querySelector(".zdybox")
+                    weekbox.onclick=function(){
+                        window.location.href="./A11.jsp"
+                    }
+                    monthbox.onclick=function(){
+                        window.location.href="./A12.jsp"
+                    }
+                    xueqibox.onclick=function(){
+                        window.location.href="./A13.jsp"
+                    }
+                    zdybox.onclick=function(){
+                        window.location.href="./A14.jsp"
+                    }
+                    
+                </script>
+
+
+                </div>
+               
+               
+               
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        
+
+    </section>
+
+    
+</body>
+</html>
