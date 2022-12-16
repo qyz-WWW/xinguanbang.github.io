@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式布局--媒体查询</title>
+    <!-- 
+    1. 1200px 或以上被视为笔记本电脑和台式机尺寸。
+    2. 768px 到 1024px 被认为是平板尺寸。
+    3. 767px 或以下被视为移动设备尺寸。 
+    -->
+
+    <!-- 电脑端布局 -->
+    <link rel="stylesheet" type="text/css" href="../1css/desk1top.css">
+    <!-- 移动端布局 -->
+    <link rel="stylesheet" href="">
+    <style>
+        @import url(../c1ss/de1sktop.css);
+    </style>
+    
+</head>
+<body>
+    <header>
+        <span class="desktop">当前为电脑端设备布局</span>
+        <span class="ipad">当前为ipad/平板设备布局</span>
+        <span class="mobile">当前为ipad/平板/移动端设备布局</span>
+        
+    </header>
+    <section>
+
+    </section>
+    <footer>
+
+    </footer>
+
+
+
+
+    <script language="javascript" type="text/javascript" >
+        //根据设备加载不同的样式
+        var setStyle = function(cssarr){
+                   var i= 0,len = cssarr.length;
+                   for(i;i<len;i++){
+                       document.write('<link href="'+cssarr[i]+'" type="text/css" rel=stylesheet>');
+                   }
+               };
+               // 判断是否移动端
+               function goPAGE() {
+                   if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+                        // window.location.href="移动端url";
+                       //  alert("mobile");
+                        //判断访问环境是 移动端 则加载以下样式
+                         setStyle(['../css/mobile.css']);
+                   }
+                   else {
+                       // window.location.href="pc端url"; 
+                      //   alert("pc")
+                       setStyle(['../css/desktop.css']);
+                        }
+               }
+               goPAGE();        // 调用function
+       </script>
+       
+       
+       
+       
+
+
+
+</body>
+</html>
