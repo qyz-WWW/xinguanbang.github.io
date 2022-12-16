@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课表</title>
+    <link rel="stylesheet" href="./course.css">
+</head>
+<body>
+    <!-- header -->
+    <!-- <header>
+
+    </header> -->
+    <!-- section -->
+    <section>
+        <p class="source">数据来源&nbsp;<a class="jwxt" href="https://eas.wvpn.huat.edu.cn">教务系统&nbsp;https://eas.wvpn.huat.edu.cn</a></p>
+        <div class="main">
+            <!-- 切换导航 -->
+        <button class="btn-xg20" id="btn" onclick="f1()">
+            <div class="icon"></div>
+            <p>信管20级</p>
+        </button>
+        <!-- button 点击事件 -->
+        <script>
+            function f1(){
+                var btn = document.getElementById('btn')
+                var changeText = document.querySelector('#btn p')
+                var tablexg20 = document.getElementsByClassName('table-xg-20')[0]
+                var tablexz20 = document.getElementsByClassName('table-xz-20')[0]
+                
+                //btn 交互效果
+                
+                btn.style.top='41px'
+                setTimeout(function(){
+                    btn.style.top='40px'
+                } , 100)
+
+                if(btn.className == 'btn-xg20'){
+                    console.log('已点击信管20级')
+                    changeText.innerHTML = '信资20级'
+                    tablexg20.style.opacity='0'
+                    tablexz20.style.opacity='1'
+                    btn.className = "btn-xz20"
+                }else{
+                    console.log('已点击信资20级')
+                    changeText.innerHTML = '信管20级'
+                    tablexz20.style.opacity='0'
+                    tablexg20.style.opacity='1'
+                    btn.className = "btn-xg20"
+                } 
+            }
+        </script>
+        <!-- 课表 -->
+        <div class="detailBox">
+        
+        </div>
+        <!-- 信管20级课表 -->
+        <table class="table table-xg-20" cellspacing="2px" align="center">
+            <!-- 表头 -->
+            <tr align="center">
+                <td style="width: 20px;">时间</td>
+                <td style="width: 45px;">周一</td>
+                <td style="width: 45px;">周二</td>
+                <td style="width: 45px;">周三</td>
+                <td style="width: 45px;">周四</td>
+                <td style="width: 45px;">周五</td>
+                <td style="width: 45px;">周六</td>
+                <td style="width: 45px;">周日</td>
+            </tr>
+            <!-- 上午 -->
+            <!-- 1-2 -->
+            <tr align="center">
+                <td rowspan="2">上午</td>
+                <td class="jsjwlb">计算机网络B</td>
+                <td class="glgt">管理沟通</td>
+                <td class="null"></td>
+                <td class="ycyjcfxmx">预测与决策分析模型</td>
+                <td class="sjkjsa">数据库技术A</td>
+                <td class="qyjcmn">企业决策模拟</td>
+                <td class="qyjcmn">企业决策/数据库课设</td>
+            </tr>
+            <!-- 3-4 -->
+            <tr align="center">
+                <!-- 已合并<td>3</td> -->
+                <td class="null"></td>
+                <td class="null"></td>
+                <td class="null"></td>
+                <td class="sjckysjwj">数据仓库与数据挖掘</td>
+                <td class="ycx">运筹学</td>
+                <td class="qyjcmn">企业决策模拟</td>
+                <td class="qyjcmn">企业决策/数据库课设</td>
+            </tr>
+            <!-- 下午 -->
+            <!-- 5-6 -->
+            <tr align="center">
+                <td rowspan="2">下午</td>
+                <td class="null"></td>
+                <td class="ycyjcfxmx">预测与决策分析模型</td>
+                <td class="jsjwlb">计算机网络B</td>
+                <td class="glgt">管理沟通</td>
+                <td class="null"></td>
+                <td class="qyjcmn">企业决策模拟</td>
+                <td class="sjkjsa">数据库技术A</td>
+            </tr>
+            <!-- 7-8 -->
+            <tr align="center">
+                <!-- 已合并<td>5</td> -->
+                <td class="null"></td>
+                <td class="sjckysjwj">数据仓库与数据挖掘</td>
+                <td class="null"></td>
+                <td class="erpscglsw">ERP生产管理实务</td>
+                <td class="erpcwglsw">ERP财务管理实务</td>
+                <td class="qyjcmn">企业决策模拟</td>
+                <td class="sjkjsa">数据库技术A</td>
+            </tr>
+            <!-- 晚上 -->
+            <!-- 9-11 -->
+            <tr align="center">
+                <td>晚上</td>
+                <td class="sjkjsa">数据库技术A/ERP财务管理</td>
+                <td class="null"></td>
+                <td class="ycx">运筹学</td>
+                <td class="erpscglsw">ERP生产管理实务</td>
+                <td class="erpcwglsw">ERP财务管理实务</td>
+                <td class="null"></td>
+                <td class="swtp">商务谈判</td>
+            </tr>
+        </table>
+        <!-- 信资20级课表 -->
+        <table class="table table-xz-20" cellspacing="2px" align="center">
+            <!-- 表头 -->
+            <tr align="center">
+                <td style="width: 20px;">时间</td>
+                <td style="width: 45px;">周一</td>
+                <td style="width: 45px;">周二</td>
+                <td style="width: 45px;">周三</td>
+                <td style="width: 45px;">周四</td>
+                <td style="width: 45px;">周五</td>
+                <td style="width: 45px;">周六</td>
+                <td style="width: 45px;">周日</td>
+            </tr>
+            <!-- 上午 -->
+            <!-- 1-2 -->
+            <tr align="center">
+                <td rowspan="2">上午</td>
+                <td class="jsjwlb">计算机网络B</td>
+                <td class="null"></td>
+                <td class="ssyqylyjs">搜索引擎原理与技术</td>
+                <td class="ycyjcfxmx">预测与决策分析模型</td>
+                <td class="null"></td>
+                <td class="null"></td>
+                <td class="null"></td>
+            </tr>
+            <!-- 3-4 -->
+            <tr align="center">
+                <!-- 已合并<td>3</td> -->
+                <td class="null"></td>
+                <td class="xxjlx">信息计量学</td>
+                <td class="null"></td>
+                <td class="sjckysjwj">数据仓库与数据挖掘</td>
+                <td class="ycx">运筹学</td>
+                <td class="null"></td>
+                <td class="null"></td>
+            </tr>
+            <!-- 下午 -->
+            <!-- 5-6 -->
+            <tr align="center">
+                <td rowspan="2">下午</td>
+                <td class="null"></td>
+                <td class="ycyjcfxmx">预测与决策分析模型</td>
+                <td class="jsjwlb">计算机网络B</td>
+                <td class="null"></td>
+                <td class="ssyqylyjs">搜索引擎原理与技术</td>
+                <td class="null"></td>
+                <td class="null"></td>
+            </tr>
+            <!-- 7-8 -->
+            <tr align="center">
+                <!-- 已合并<td>5</td> -->
+                <td class="null"></td>
+                <td class="sjckysjwj">数据仓库与数据挖掘</td>
+                <td class="null"></td>
+                <td class="xxjlx">信息计量学</td>
+                <td class="null"></td>
+                <td class="null"></td>
+                <td class="null"></td>
+            </tr>
+            <!-- 晚上 -->
+            <!-- 9-11 -->
+            <tr align="center">
+                <td>晚上</td>
+                <td class="null"></td>
+                <td class="dsjyyjs">大数据应用技术</td>
+                <td class="ycx">运筹学</td>
+                <td class="dsjyyjs">大数据应用技术</td>
+                <td class="null"></td>
+                <td class="null"></td>
+                <td class="null"></td>
+            </tr>
+        </table>
+
+
+
+
+        </div>
+        
+        
+    </section>
+    <!-- footer -->
+    <footer>
+        <ul>
+            <li id="li1" onclick="location.href='./index.html'">首页</li>
+            <li id="li2" onclick="location.href='./course.html'">课表</li>
+            <li id="li3" onclick="location.href='./expansion.html'">拓展</li>
+            <li id="li4" onclick="location.href='./about.html'">关于</li>
+        </ul>
+    </footer>
+</body>
+</html>

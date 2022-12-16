@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+html,body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+/* header */
+/* header{
+    height: 70px;
+    background: #000;
+} */
+
+/* section */
+section{
+    flex: 1;
+    background: rgb(16, 225, 131);
+}
+
+button{ 
+    width: 100px;
+    height: 50px;
+    background-color: rgb(137, 137, 137);
+}
+
+/* footer */
+footer{
+    height: 70px;
+    background: #4099ff;
+}
+footer ul{
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+    display: flex;
+    /* 分散对齐 */
+    justify-content: space-around;
+}
+footer ul li{
+    width: 24%;
+    height: 85%;
+    border: 1px solid green;
+    color: white;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
