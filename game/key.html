@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按键检测-分别按W、R键</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        span#d,span#s{
+            font-size: 300px;
+            font-weight: 800;
+            color: #fff;
+        }
+        span#m,span#w{
+            font-size: 100px;
+            font-weight: 800;
+            color: #000;
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener("keydown",keydown);
+        document.addEventListener("keyup",keyup);
+        document.addEventListener("keydown",keydown);
+        document.addEventListener("keyup",keyup);
+        document.addEventListener("keypress",keypress);
+        var body=document.body;
+        var mp3d = "../video/d.wav";
+        var dplayer = new Audio(mp3d);
+
+        var mp3m= "../video/m.wav";
+        var mplayer = new Audio(mp3m);
+
+        var mp3s = "../video/s.wav";
+        var splayer = new Audio(mp3s);
+
+        var mp3w = "../video/w.wav";
+        var wplayer = new Audio(mp3w);
+     //播放 mp3这个音频对象
+    //暂停
+    //
+    //player.load();
+        function keydown(event){          // 传递传递参数event
+            if (event.keyCode == 87){     // “87”为按键W，可根据需要修改为其他
+                //alert("你按下了W键");      // 按下后执行的代码
+                body.style.background='#000'
+                body.innerHTML='<span id="d">叼</span>'
+                dplayer.play();
+                
+            }else if(event.keyCode == 82){
+                body.style.background='#000'
+                body.innerHTML='<span id="s">石</span>'
+                splayer.play();
+            }
+        }
+        function keyup(event){          // 传递传递参数event
+            if (event.keyCode == 87){     // “87”为按键W，可根据需要修改为其他
+                //alert("你抬起了X键");      // 按下后执行的代码
+                body.innerHTML='<span id="m">毛</span>'
+                body.style.background='#fff'
+                //dplayer.load();
+                mplayer.play();
+            }else if(event.keyCode == 82){
+                
+                body.style.background='#fff'
+                body.innerHTML='<span id="w">玮</span>'
+                wplayer.play();
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        function keypress(event){          // 传递传递参数event
+            if (event.keyCode == 90){     // “87”为按键W，可根据需要修改为其他
+                //alert("你按了Y键");      // 按下后执行的代码
+                body.style.background='green'
+            }
+        }
+    </script>
+</body>
+</html>
