@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+html,body{
+    opacity: 0.9;
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+ul li{
+    list-style: none;
+
+}
+header{
+    height: 50px;
+    background-color: yellow;
+    /* color: red; */
+}
+section{
+    background-color: red;
+    flex: 1;
+}
+footer{
+    height: 100px;
+    background-color: black;
+}
+.desktop{
+    display: inline-block;
+}
+.ipad{
+    display: none;
+}
+.mobile{
+    display: none;
+}
