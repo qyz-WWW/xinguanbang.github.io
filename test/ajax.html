@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../js/jquery-1.8.0.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                type: "get",//请求类型
+                datatype: "json",//数据类型
+                url: "http://localhost:8080/D:/HTML20220924/%E6%A1%88%E4%BE%8B1/HTML1/demo.json",//向哪里请求
+                success: function(data){//请求成功后执行该函数
+                    console.log(data.name)//tom
+                  document.body.innerHTML=data.name
+                }
+            })
+        })
+    </script>
+</body>
+</html>
