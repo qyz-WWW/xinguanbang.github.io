@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>首页</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        ul li{
+            list-style: none;
+        }
+        body{
+            background: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(243, 60, 60);
+        }
+        a{
+            display: inline-block;
+            border: 1px solid red;
+            width: 5rem;
+            height: 1.8rem;
+            text-decoration: none;
+            font-size: 0.5rem;
+            background: #fff;
+            border-radius: 0.4rem;
+            box-shadow: .2633rem .2633rem .1433rem #b2b2b2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a:hover{
+            background: rgb(255, 163, 163);
+            color: #fff;
+        }
+        ul{
+            border: 3px solid green;
+            width: 5.3333rem;
+            height: 10rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+    </style>
+    <!-- 参数接收处理 ?test=logo-->
+    <script>
+        window.onload=function(){
+            let params1 = location.search.substr(1)//去除链接含参部分的问号 >> test=logo
+            console.log("去？ params1: "+params1)
+            console.log("typeof params1: "+typeof params1)
+            let test1 = params1.split('=') // >> test,logo 对象数据类型
+            console.log("去= test1: "+test1)
+            console.log("typeof test1: "+typeof test1)
+            let test = test1[1]
+            console.log("test: "+test)
+            console.log("typeof test: "+typeof test)
+            switch(test){
+                case 'logo':
+                var a1 = document.querySelector('ul li:nth-child(1) a')
+                a1.innerHTML='logo测试正常!'
+                a1.style.background='#1ad315'
+                a1.style.color='#fff'
+                break;
+                case 'ad':
+                var a2 = document.querySelector('ul li:nth-child(2) a')
+                a2.innerHTML='广告测试正常!'
+                a2.style.background='#1ad315'
+                a2.style.color='#fff'
+                break;
+                case '404':
+                var a3 = document.querySelector('ul li:nth-child(3) a')
+                a3.innerHTML='404测试正常!'
+                a3.style.background='#1ad315'
+                a3.style.color='#fff'
+                break;
+                default:
+                break;
+                
+
+            }
+        }
+        
+
+        
+    </script>
+
+
+
+
+
+</head>
+<body>
+    基础测试1
+    <ul>
+        <li><a href="./logo.html">启动logo测试</a></li>
+        <li><a href="./ad.html">启动广告测试</a></li>
+        <li><a href="https://xinguanbang.github.io/404.html">404网页测试</a></li>
+    </ul>
+    <span style="width: 8rem;margin-top:1rem;font-size: 0.3rem;line-height:0.5rem;">&emsp;&emsp;以上测试项在运行正常的情况下5s后均能自动返回当前页面，若出现页面布局不兼容、跳转失败等异常情况请及时反馈具体问题。</span>
+
+
+
+    <script>
+        //根据设备宽度计算html的font-size
+        function resetHtmlFont(){
+            //获取html对象并动态设置font-size = 设备宽度的1/10
+            document.documentElement.style.fontSize = screen.width/10 + 'px';
+        }
+        //执行一下
+        resetHtmlFont();
+        //如果窗口大小改变了，则重新计算基础font-size
+        window.onresize = resetHtmlFont;
+    </script>
+</body>
+</html>

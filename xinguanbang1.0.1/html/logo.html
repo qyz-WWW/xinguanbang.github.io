@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>logo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        ul li{
+            list-style: none;
+        }
+        body{
+            background-color: #3a6eee;
+            background-image: url(../images/logo/logo1.png);
+            /*background-size: contain;*/
+            background-size: 125%;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(243, 60, 60);
+        }
+        
+    </style>
+    <script>
+        window.onload=function(){
+            setTimeout(function (){
+                window.location.replace('./index.html?test=logo')
+            },5000)
+        }
+    </script>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        //根据设备宽度计算html的font-size
+        function resetHtmlFont(){
+            //获取html对象并动态设置font-size = 设备宽度的1/10
+            document.documentElement.style.fontSize = screen.width/10 + 'px';
+        }
+        //执行一下
+        resetHtmlFont();
+        //如果窗口大小改变了，则重新计算基础font-size
+        window.onresize = resetHtmlFont;
+    </script>
+</body>
+</html>

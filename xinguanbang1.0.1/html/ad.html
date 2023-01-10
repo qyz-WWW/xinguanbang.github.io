@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>广告</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        ul li{
+            list-style: none;
+        }
+        body{
+            background-color: #ffce42;
+            background-image: url(../images/AD/xinguanbang1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(243, 60, 60);
+        }
+        .time{
+            border: .03133rem solid rgba(255, 255, 255, 0.641);
+            border-radius: 0.4rem;
+            width: 2rem;
+            height: 0.8rem;
+            position: absolute;
+            top: 0.8rem;
+            right: 0.3rem;
+            background: #ffffff45;
+            font-size: 0.425rem;
+            text-align: center;
+            line-height: 0.8rem;
+
+            color: #fff;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            setTimeout(function (){
+                window.location.replace('./index.html')
+            },5000000)
+        }
+    </script>
+</head>
+<body>
+    <div class="time"></div>
+    <script>
+        //手动执行
+        var timeDiv = document.querySelector(".time")
+        timeDiv.onclick=function(){
+            setTimeout(function (){
+                window.location.replace('./index.html?test=ad')
+            },300)
+        }
+
+
+        //自动执行
+        window.onload=function(){
+
+
+
+
+
+
+
+            
+                //var times = 1 * 60;//剩余时间,单位秒
+                var times = 5
+                var timeDiv = document.querySelector(".time")
+                var timeObj = null;
+                function timer(){
+                    if(times == -1){
+                        //倒计时结束，提交表单
+                        document.getElementById("frm").submit();
+                        window.clearInterval(timeObj);
+                        return;
+                    }
+                    //var t = Math.floor(times/60) +"分"+times%60+"秒"
+                    var text = times+'s&nbsp;跳过'
+                    timeDiv.innerHTML = text;
+                    times --;
+                }
+                timeObj = window.setInterval(timer,1000);
+           
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            setTimeout(function (){
+                clearTimeout(timeObj)
+            },6000)//清除计时器
+            setTimeout(function (){
+                clearTimeout(timeObj)
+                window.location.replace('./index.html?test=ad')
+            },7500)
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        //根据设备宽度计算html的font-size
+        function resetHtmlFont(){
+            //获取html对象并动态设置font-size = 设备宽度的1/10
+            document.documentElement.style.fontSize = screen.width/10 + 'px';
+        }
+        //执行一下
+        resetHtmlFont();
+        //如果窗口大小改变了，则重新计算基础font-size
+        window.onresize = resetHtmlFont;
+    </script>
+</body>
+</html>
