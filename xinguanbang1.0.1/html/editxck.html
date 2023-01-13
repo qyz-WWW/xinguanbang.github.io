@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>信管帮</title>
+    <!-- 设计稿iPhone XR 414 html基础font-size=41.1px -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        
+        body{
+            background: #F6F6F6;
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
+        header{
+            height: 1.8116rem;
+            display: flex;
+            /*子元素垂直居中
+            align-items: center;*/
+            position: relative;
+        }
+        header .title{
+            display: inline-block;
+            width: 2.07rem;
+            height: .3865rem;
+            font-size: .3865rem;
+            font-weight: 600;
+            /*水平居中
+            margin: 0 auto;*/
+            /*文本水平垂直居中
+            text-align: center;*/
+            line-height: .3865rem;
+            letter-spacing: .0242rem;
+            /*位置*/
+            position: absolute;
+            bottom: .3382rem;
+            left: 50%;
+            transform: translateX(-1.035rem);
+
+        }
+        header .left{
+            width: .628rem;
+            height: .628rem;
+            background-image: url(../images/editxck/left.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            /*位置*/
+            position: absolute;
+            bottom: .2174rem;
+            left: .2174rem;
+
+        }
+        header .backBtn{
+            width: 1.1rem;
+            height: 1.1rem;
+            
+            /*位置*/
+            position: absolute;
+            bottom: 0rem;
+            left: 0rem;
+            position: absolute;
+            z-index: 100;
+        }
+        header .right{
+            border: .01rem solid #CBCFCC;
+            border-radius: 0.38645rem;
+            width: 2.1014rem;
+            height: .7729rem;
+            background-image: url(../images/editxck/right.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            /*位置*/
+            position: absolute;
+            bottom: .1449rem;
+            right: .1691rem;
+
+        }
+        section{
+            flex: 1;
+            background-color: #a1a1a1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        section .box{
+            border-radius: .4rem;
+            width: 6.4155rem;
+            height: 10rem;
+            background: #FEFEFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        section .box .img1{
+            /*
+            border: .0242rem solid red;*/
+            width: 4.9167rem;
+            height: 3.7392rem;
+            margin-top: 20%;
+            background-image: url(../images/editxck/img1.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        section .form{
+            width: 100%;
+            
+            height: 4.8rem;
+            font-size: .3382rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form input{
+            margin-top: .1208rem;
+            width: 80%;
+            font-size: .5rem;
+            border: none;
+            border-bottom: .0242rem solid #b0b0b09b;
+        }
+        .form input:focus{
+            outline: none;
+            border-bottom: .0242rem solid #ff1414;
+        }
+        input::-webkit-input-placeholder{
+            color: #bfbfbfb5;
+            font-size: .4rem;
+        }
+        .form .btn{
+            border: none;
+            border-radius: .2831rem;
+            width: 80%;
+            height: 1.2077rem;
+            background-color: #3579F6;
+            font-size: .43rem;
+            color: #fff;
+            letter-spacing: .07rem;
+            line-height: 1.2077rem;
+            text-align: center;
+
+        }
+        footer{
+            height: 1.4734rem;
+        }
+    </style>
+    <!-- 参数接收处理 ?test=logo-->
+    <script>
+        /*
+        window.onload=function(){
+            let params1 = location.search.substr(1)//去除链接含参部分的问号 >> test=logo
+            console.log("去？ params1: "+params1)
+            console.log("typeof params1: "+typeof params1)
+            let test1 = params1.split('=') // >> test,logo 对象数据类型
+            console.log("去= test1: "+test1)
+            console.log("typeof test1: "+typeof test1)
+            let test = test1[1]
+            console.log("test: "+test)
+            console.log("typeof test: "+typeof test)
+            switch(test){
+                case 'logo':
+                var a1 = document.querySelector('ul li:nth-child(1) a')
+                a1.innerHTML='logo测试正常!'
+                a1.style.background='#1ad315'
+                a1.style.color='#fff'
+                break;
+                case 'ad':
+                var a2 = document.querySelector('ul li:nth-child(2) a')
+                a2.innerHTML='广告测试正常!'
+                a2.style.background='#1ad315'
+                a2.style.color='#fff'
+                break;
+                case '404':
+                var a3 = document.querySelector('ul li:nth-child(3) a')
+                a3.innerHTML='404测试正常!'
+                a3.style.background='#1ad315'
+                a3.style.color='#fff'
+                break;
+                default:
+                break;
+                
+
+            }
+        }
+        */
+
+        
+    </script>
+
+
+
+
+
+</head>
+<body>
+    <header>
+        <div class="backBtn"></div>
+        <div class="left"></div>
+        <span class="title">通信行程卡</span>
+        <div class="right"></div>
+    </header>
+    <script>
+        document.querySelector(".backBtn").onclick=function(){
+            window.history.go(-1)
+        }
+        document.querySelector(".right").onclick=function(){
+            window.location.replace('./index.html')
+        }
+    </script>
+
+
+    <section>
+        <div class="box">
+            <div class="img1"></div>
+            <div class="form">
+                请输入手机号: <input type="text" name="phone" id="phone" placeholder="11位手机号">
+                <br>
+                请输入城市：<input type="text" name="area" id="area" placeholder="X省X市,X省X市(英文 , 隔开)">
+                <br>
+                <button class="btn">提交</button>
+                <script>
+                    /*
+                    var phone = document.querySelector("#phone").value
+                    var area = document.querySelector("#area").value*/
+                    var btn = document.querySelector(".btn")
+                    btn.onclick=function(){
+                            window.location.href = './xck.html?phone='+document.querySelector("#phone").value+'&area='+encodeURIComponent(document.querySelector("#area").value)
+                    }
+
+
+
+            </script>
+            </div>
+            
+            
+
+
+
+
+        </div>
+    </section>
+
+
+    <footer>
+
+    </footer>
+
+
+    <script>
+        //根据设备宽度计算html的font-size
+        function resetHtmlFont(){
+            //获取html对象并动态设置font-size = 设备宽度的1/10
+            document.documentElement.style.fontSize = screen.width/10 + 'px';
+        }
+        //执行一下
+        resetHtmlFont();
+        //如果窗口大小改变了，则重新计算基础font-size
+        window.onresize = resetHtmlFont;
+    </script>
+</body>
+</html>

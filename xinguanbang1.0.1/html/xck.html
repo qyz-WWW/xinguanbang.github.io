@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>信管帮</title>
+    <!-- 设计稿iPhone XR 414 html基础font-size=41.1px -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        ul li{
+            list-style: none;
+        }
+        body{
+            background: #F6F6F6;
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
+        header{
+            height: 1.8116rem;
+            display: flex;
+            /*子元素垂直居中
+            align-items: center;*/
+            position: relative;
+        }
+        header .title{
+            user-select: none;
+            display: inline-block;
+            width: 2.07rem;
+            height: .3865rem;
+            font-size: .3865rem;
+            font-weight: 600;
+            /*水平居中
+            margin: 0 auto;*/
+            /*文本水平垂直居中
+            text-align: center;*/
+            line-height: .3865rem;
+            letter-spacing: .0242rem;
+            /*位置*/
+            position: absolute;
+            bottom: .3382rem;
+            left: 50%;
+            transform: translateX(-1.035rem);
+
+        }
+        header .left{
+            width: .628rem;
+            height: .628rem;
+            background-image: url(../images/editxck/left.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            /*位置*/
+            position: absolute;
+            bottom: .2174rem;
+            left: .2174rem;
+
+        }
+        header .backBtn{
+            width: 1.1rem;
+            height: 1.1rem;
+            /*位置*/
+            position: absolute;
+            bottom: 0rem;
+            left: 0rem;
+            position: absolute;
+            z-index: 100;
+
+        }
+        
+        header .right{
+            border: .01rem solid #CBCFCC;
+            border-radius: 0.38645rem;
+            width: 2.1014rem;
+            height: .7729rem;
+            background-image: url(../images/editxck/right.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            /*位置*/
+            position: absolute;
+            bottom: .1449rem;
+            right: .1691rem;
+
+        }
+        section{
+            flex: 1;
+            background-color: #2AA566;
+            /*子元素水平居中*/
+            display: flex;
+            justify-content: center;
+            position: relative;
+            overflow-y: scroll;
+
+        }
+        @font-face {
+            font-family: txdsjxck;
+            src: url(../font/FZSanBTJW.TTF);
+        }
+        section .title1{
+            user-select: none;
+
+            /*
+            border: .0242rem solid red;*/
+            width: 6.75rem;
+            height: .7729rem;
+            /*
+            background-image: url(../images/editxck/material.png);*/
+            /*对比度
+            filter: contrast(0);*/
+            /*background-repeat: no-repeat；*/
+            /*background-position: -1.6425rem -3.0676rem;*/
+            /*background-size: 148.7%;*/
+            /*background-size: 20.7%;*/
+            /*背景图效果差，高仿文本替代*/
+            font-family: txdsjxck;
+            font-weight: 600;
+            font-size: .7929rem;
+            line-height: .7729rem;
+            letter-spacing: .05rem;
+            color: #fff;
+            position: absolute;
+            top: .8454rem;
+            
+
+        }
+        section .title2{
+            user-select: none;
+
+            /*
+            border: .0242rem solid red;*/
+            width: 3.8164rem;
+            height: .4106rem;
+            font-size: .4106rem;
+            letter-spacing: .012rem;
+            line-height: .4106rem;
+            color: #fff;
+            position: absolute;
+            top: 2.0531rem;
+
+        }
+        section .box{
+            user-select: none;
+            /*
+            border: .0242rem solid red;*/
+            border-radius: .2899rem;
+            width: 8.5507rem;
+            height: 8.9rem;
+            /*
+            height: 9.37rem;area两行高度*/
+            /*两行高度差：9.37 - 8.9 = 0.47  section .text top+0.47rem*/
+            
+            /*height: 9.05rem;*//*地区文本两行大于6字，加高box area*/
+            /*min-height: 9.05rem;*//*失效*/
+            background-color: #FBFFFC;
+
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            position: absolute;
+            top: 2.9952rem;
+
+
+
+            padding-bottom: .4106rem;
+
+        }
+        section .box .inner1{
+            /*
+            border: .0242rem solid red;*/
+            border-radius: .2899rem .2899rem 0 0;
+            width: 100%;
+            height: .4348rem;
+            background: #D9EEE1;
+        }
+        section .box .inner2{
+            /*
+            border: .0242rem solid red;*/
+            border-radius:0 0 .41rem .41rem / 0 0 .4106rem .4106rem;
+            width: 5.5556rem;
+            height: .4106rem;
+            margin: 0 auto;
+            background: #D9EEE1;
+        }
+        section .box .text1{
+            /*
+            border: .0242rem solid red;*/
+            /*width: 2.9952rem;*/
+            width: 3.2rem;
+            /*height: .3623rem;*/
+            height: .3823rem;
+
+            font-size: .3623rem;
+            /*line-height: .3623rem;*/
+            line-height: .3823rem;
+            font-weight: 550;
+            letter-spacing: .02rem;
+            text-align: center;
+            color: #61ac78e8;
+            margin: -0.6039rem auto;
+        }
+        section .box .text2{
+            /*
+            border: .0242rem solid red;*/
+            /*width: 2.9952rem;*/
+            width: 7.2464rem;
+            /*height: .3623rem;*/
+            height: .4106rem;
+
+            font-size: .4082rem;
+            /*line-height: .3623rem;*/
+            line-height: .4106rem;
+            font-weight: 550;
+            letter-spacing: .02rem;
+            text-align: center;
+            color: #080808e8;
+            position: absolute;
+            top: 1.3285rem;
+            left: 50%;
+            transform: translateX(-3.6232rem);
+        }
+        section .box .text3{
+            /*
+            border: .0242rem solid red;*/
+            /*width: 2.9952rem;*/
+            width: 7rem;
+            /*height: .3623rem;*/
+            height: .4831rem;
+
+            font-size: .4531rem;
+            /*line-height: .3623rem;*/
+            line-height: .4831rem;
+            font-weight: 550;
+            letter-spacing: .02rem;
+            text-align: center;
+            color: #9B9FA4;
+            position: absolute;
+            top: 2.1rem;
+            left: 50%;
+            transform: translateX(-3.5rem);
+        }
+        section .box .demo{
+            /*
+            border: .0242rem solid red;*/
+            width: 3.599rem;
+            height: 3.599rem;
+            background-image: url(../images/editxck/a.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+
+
+            position: absolute;
+            top: 3.5024rem;
+            /*
+            left: 50%;
+            transform: translateX(-1.7995rem);*/
+
+            animation: scale1 1.55s infinite;
+        }
+        @keyframes scale1{
+            0%{
+                transform: scale(0.95);
+            }
+            50%{
+                transform: scale(1.2);
+            }
+            100%{
+                transform: scale(0.95);
+            }
+        }
+        .box hr{
+            border:.0024rem solid #e3e7e4;
+            width: 7.6087rem;
+            position: absolute;
+            top: 8.23rem;
+        }
+        .box .area{
+            /*
+            border: .0242rem solid red;*/
+            width: 7.6287rem;
+            /*height: .4106rem;*/
+            
+            min-height: .4106rem;
+            /*文本自动换行*/
+            word-wrap:break-word;
+            word-break:break-all;
+            /*height: .8212rem;*//*地区文本两行大于6字，加高box area*/
+            font-size: .411rem;
+            line-height: .506rem;
+            color: #9B9FA4;
+            letter-spacing: .05rem;
+            /*text-align: center;*/
+            text-align: left; 
+            position: absolute;
+            /*bottom: .4106rem;*/
+            top: 8.6rem;
+            
+        }
+
+
+        section .text{
+            user-select: none;
+            
+            /*
+            border: .0142rem solid red;*/
+            width: 10.0507rem;
+            height: 5.5029rem;
+            position: absolute;
+            /*top: 13.4058rem;*/
+            top: 12.6rem;
+            /*
+            background-image: url(../images/editxck/7ec8737ac7983305490887b603185ccf_07c5fe4584750e3548f9d94f708374ce_8.PNG.png);
+            
+            background-repeat: no-repeat;
+            background-position: -0.8rem -16.8rem;
+            background-size: 115%;*/
+           /* filter:saturate(10);*/
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /*超出最低字体大小，采用缩放达到更小效果*/
+            transform: scale(0.85);
+        }
+        section .text .t1,.t2{
+            
+            font-size: .3rem;
+            letter-spacing: .01rem;
+            color: #fff;
+        }
+        section .text .t1{
+            margin-top: .22rem;
+        }
+        section .text .t2{
+            margin-top: .18rem;
+        }
+        section .t3{
+            width: 100%;
+            height: .5rem;
+            text-align: center;
+            /*
+            border: .0242rem solid red;*/
+            margin-top: .3rem;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        section .t3 hr{
+            /**/
+            background: #fff;
+            border: .02rem solid #fff;
+            width: 3rem;
+            height: .0rem;
+            margin-top: .33rem;
+        }
+        
+        section .t3 p{
+            font-size: .38rem;
+            line-height: .5rem;
+            color: #fff;
+        }
+        section .t4{
+            /*
+            border: .0242rem solid rgb(255, 255, 255);*/
+            width: 100%;
+            height: 0.75rem;
+            margin-top: .25rem;
+            background-image: url(../images/editxck/logos.png);
+            background-repeat: no-repeat;
+            background-size: 98% 100%;
+            background-position: center;
+
+        }
+        section .text .t5{
+            /*
+            border: .0242rem solid rgb(255, 255, 255);*/
+            font-size: .368rem;
+            letter-spacing: .0025rem;
+            color: #fff;
+            margin-top: .4rem;
+        }
+        section .t6{
+            /*
+            border: .0242rem solid rgb(232, 43, 43);*/
+            width: 7.2464rem;
+            height: .8rem;
+            
+            font-size: .35rem;
+            line-height: .8rem;
+            letter-spacing: .01rem;
+            margin-top: .55rem;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            transform: scale(0.9);
+        }
+        section .t6 div{
+            /*
+            border: .0242rem solid rgb(43, 232, 59);*/
+            width: .6rem;
+            height: .6rem;
+            
+            background-image: url(../images/editxck/Xlogo.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            margin-right: .1rem;
+
+        }
+
+        footer{
+            height: 1.4734rem;
+        }
+    </style>
+    <!-- 参数接收处理 ?phone=110&area=A-->
+    <script>
+        
+        window.onload=function(){
+            let params1 = location.search.substr(1)//去除链接含参部分的问号 >> phone=110&area=A
+            let params2 = params1.split('&') // >> phone=110,area=A 对象数据类型
+            let phone1 = params2[0].split('=') // >> phone,110对象数据类型
+            let area1 = params2[1].split('=') // >> area,A对象数据类型
+            let phone = phone1[1]
+            let p1 = phone[0]
+            let p2 = phone[1]
+            let p3 = phone[2]
+            let p8 = phone[7]
+            let p9 = phone[8]
+            let p10 = phone[9]
+            let p11 = phone[10]
+            let safePhone = p1+p2+p3+'****'+p8+p9+p10+p11
+            /*let area = area1[1]中文乱码*/
+            let area = decodeURIComponent(area1[1])
+            console.log("phone: "+phone)
+            console.log("safePhone: "+safePhone)
+            console.log("area: "+area)
+
+            var Phone = document.querySelector(".box .text2")
+
+            var Area = document.querySelector(".area span")
+            Phone.innerHTML=safePhone+'的动态行程卡'
+            Area.innerHTML=area
+
+            if(document.querySelector(".area span").innerHTML.length > 6){
+                //.box加高
+                box.style.height='9.37rem'
+                //.text top+0.47rem
+                text.style.top="13.07rem"
+    
+            }
+
+
+            
+            
+                
+
+            
+        }
+        
+
+        
+    </script>
+
+
+
+
+
+</head>
+<body>
+    <header>
+        <div class="backBtn"></div>
+        <div class="left"></div>
+        <span class="title">通信行程卡</span>
+        <div class="right"></div>
+    </header>
+    <script>
+        document.querySelector(".backBtn").onclick=function(){
+            window.history.go(-1)
+        }
+        document.querySelector(".right").onclick=function(){
+            window.location.replace('./index.html')
+        }
+    </script>
+
+
+    <section>
+        <div class="title1">通信大数据行程卡</div>
+        <span class="title2">疫情防控，人人有责</span>
+        <div class="box">
+            <div class="inner1"></div>
+            <div class="inner2"></div>
+            <div class="text1">请收下绿色行程卡</div>
+            <div class="text2">166****6666的动态行程卡</div>
+            <div class="text3"><!--更新于:&nbsp;2022.12.12&nbsp;18:22:22--></div>
+            <div class="demo"></div>
+            <hr>
+            <div class="area">您于7天内到达或途经:&nbsp;<span style="font-weight: 600;color:black">河南省南阳市,湖北省郑州市,河南省武汉市</span></div>
+            
+        </div>
+        <div class="text">
+            <span class="t1">结果包含您在前7天内到达的国家（地区）与停留4小时以上的国内城市</span>
+            <span class="t2">色卡仅对到访地作提醒，不关联健康状况</span>
+            <span class="t3">
+                <hr>
+                <p>本服务联合提供</p>
+                <hr>
+            </span>
+            <div class="t4"></div>
+            <span class="t5">
+                客服热线：10000 / 10086 / 10010 / 10099
+            </span>
+            <div class="t6">
+                <div></div>
+                <span>信管帮&nbsp;提供云服务技术支持</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+    </footer>
+
+
+    <script>
+        //根据设备宽度计算html的font-size
+        function resetHtmlFont(){
+            //获取html对象并动态设置font-size = 设备宽度的1/10
+            document.documentElement.style.fontSize = screen.width/10 + 'px';
+        }
+        //执行一下
+        resetHtmlFont();
+        //如果窗口大小改变了，则重新计算基础font-size
+        window.onresize = resetHtmlFont;
+    </script>
+    <!-- 自动增加容器高度 -->
+    <script>
+        var box =  document.querySelector("section .box")
+        var text =  document.querySelector("section .text")
+
+        //var areaH = document.querySelector(".area").offsetHeight
+        //areaH = 23 44
+        /*
+        if(areaH > 21){
+            //.box加高
+            box.style.height='9.37rem'
+            //.text top+0.47rem
+            text.style.top="13.07rem"
+
+        }*/
+        /*window.onload=function(){*/
+            
+        //}
+        
+
+    </script>
+    <!-- 获取时间 -->
+    <script>
+        var text3 = document.querySelector(".text3")
+        
+        
+        setInterval(function(){
+            var time = new Date()
+            var year = time.getFullYear()
+            var month = time.getMonth()+1
+            if(month < 10) month = '0' + month
+            var day = time.getDate()
+            if(day < 10) day = '0' + day
+            /*
+            var week = time.getDay()
+            switch(week){
+            case 0:  week = '日'
+            break
+            case 1:  week = '一'
+            break
+            case 2:  week = '二'
+            break
+            case 3:  week = '三'
+            break
+            case 4:  week = '四'
+            break
+            case 5:  week = '五'
+            break
+            case 6:  week = '六'
+            break
+            }
+            */
+            var hours = time.getHours()
+            if(hours < 10) hours = '0' + hours
+            var minutes = time.getMinutes()
+            if(minutes < 10) minutes = '0' + minutes
+            var seconds = time.getSeconds()
+            if(seconds < 10) seconds = '0' + seconds
+            var haomiao = time.getMilliseconds()
+            /*
+            if(haomiao < 10) {
+                haomiao = '00' + haomiao
+            }else if(haomiao >= 10 && haomiao < 100){
+                haomiao = '0' + haomiao
+            }
+            */
+            //var time1 = year+''+month+''+day+''+hours+''+minutes+''+seconds+''+haomiao
+            var time1 ='更新于:&nbsp;'+year+'.'+month+'.'+day+'&nbsp;'+hours+':'+minutes+':'+seconds
+            text3.innerHTML=time1
+        },1000)
+                        
+    </script>
+</body>
+</html>
