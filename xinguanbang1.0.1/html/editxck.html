@@ -155,7 +155,9 @@
 
         }
         footer{
-            height: 1.4734rem;
+            /*
+            height: 1.4734rem;*/
+            height: 0rem;
         }
     </style>
     <!-- 参数接收处理 ?test=logo-->
@@ -238,6 +240,9 @@
                     var area = document.querySelector("#area").value*/
                     var btn = document.querySelector(".btn")
                     btn.onclick=function(){
+                            //btn.style.opacity='0.6'
+                            btn.style.backgroundColor='#a7a7a7'
+                            btn.innerHTML='生成中...'
                             window.location.href = './xck.html?phone='+document.querySelector("#phone").value+'&area='+encodeURIComponent(document.querySelector("#area").value)
                     }
 
