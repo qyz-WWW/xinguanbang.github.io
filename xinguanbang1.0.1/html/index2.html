@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>建议使用信管帮APP</title>
+    <!-- 
+        主题色：
+        1. body 
+        2. 
+    
+    -->
+    <link rel="stylesheet" href="../css/index_lunbotu1.css">
+    <link rel="stylesheet" href="../css/indexsection.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        ul li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        ::-webkit-scrollbar{
+            /* width: 0; 移动端取消滚动条无效*/
+            display: none;
+        }
+        body{
+            user-select: none;
+            /**/
+            background-color: #da434d;
+            display: flex;
+            flex-direction: column;
+        }
+        section{
+            /*
+            border: .0742rem solid rgb(0, 255, 251);*/
+            /*填充剩余高度*/
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        
+    </style>
+    
+    
+
+
+
+
+
+</head>
+<body>
+    <div class="adContainer">
+            <a class="adContainer1"></a>
+            <a class="adContainer1"></a>
+            <a class="adContainer1"></a>
+            <a class="adContainer1"></a>
+            <a class="adContainer1"></a>
+            <a class="adContainer1"></a>
+            
+
+            <a class="adContainer2"></a> 
+    </div>
+    <section>
+        <!-- 课表提醒 -->
+        <div class="coursebox"></div>
+
+        <!-- 内容模块区域 -->
+        <div class="modelbox">
+            <!-- 锚点 -->
+            <div class="model">
+                <a class="model1" href="#leftcontent">左模块区</a>
+                <a class="model2" href="#rightcontent">右模块区</a>
+            </div>
+            <!-- 内容 -->
+            <div class="modelcontent">
+                <!-- leftcontent -->
+                <div class="leftcontent" id="leftcontent">
+                    left
+                </div>
+                <!-- rightcontent -->
+                <div class="rightcontent" id="rightcontent">
+                    right
+                </div>
+            </div>
+
+            
+        </div>
+        
+    </section>
+
+
+    
+
+
+
+    <script>
+        //根据设备宽度计算html的font-size
+        function resetHtmlFont(){
+            //获取html对象并动态设置font-size = 设备宽度的1/10
+            document.documentElement.style.fontSize = screen.width/10 + 'px';
+        }
+        //执行一下
+        resetHtmlFont();
+        //如果窗口大小改变了，则重新计算基础font-size
+        window.onresize = resetHtmlFont;
+    </script>
+    <script>
+        //document.getElementsByClassName("item")[2].scrollIntoView({behavior:'smooth'})
+        //自动滚动
+        var n = document.getElementsByClassName("adContainer1").length //n 总图片数量
+        var t = 6000 //时间间隔
+        var number = 0
+
+        var adContainer2Color = ['linear-gradient(to top,#D9434D 0%,rgba(218, 67, 77, 0) 25%)','linear-gradient(to top,rgba(125, 19, 6, 1) 0%,rgba(125, 19, 6, 0) 25%)','linear-gradient(to top,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0)','linear-gradient(to top,rgba(38, 63, 0, 1) 0%,rgba(38, 63, 0, 0) 25%)','linear-gradient(to top,#4B4CD6 0%,rgba(75, 76, 214, 0) 25%)','linear-gradient(to top,#D9434D 0%,rgba(218, 67, 77, 0) 25%)']
+        var adContainer2Href = ['https://pro.m.jd.com/mall/active/4W28Z2kFoEnYPPttQJqqNNsc2s28/index.html?bd_vid=8800155284773407438','https://www.huat.edu.cn/','./editxck.html','http://sheqi.01ny.cn/index.php?m=content&c=index&a=show&catid=214&id=56107','./666','https://pro.m.jd.com/mall/active/4W28Z2kFoEnYPPttQJqqNNsc2s28/index.html?bd_vid=8800155284773407438']
+        var bodyColor = ['#D9434D','rgba(125, 19, 6, 1)','rgba(255, 255, 255, 1)','rgba(38, 63, 0, 1)','#4B4CD6','#D9434D']
+        
+        function f1(){
+            
+            
+            var adContainer1 = document.getElementsByClassName("adContainer1") //object
+            //主题颜色
+            var body = document.body
+            var adContainer2 = document.getElementsByClassName("adContainer2")[0]
+
+            if(number < n-1){
+                adContainer1[number].scrollIntoView({behavior:"smooth"})
+                switch(number){
+                    case 0:
+                    adContainer2.style.background=adContainer2Color[0];
+                    adContainer2.href=adContainer2Href[0];
+                    body.style.background=bodyColor[0];
+                    break;
+                    case 1:
+                    adContainer2.style.background=adContainer2Color[1];
+                    adContainer2.href=adContainer2Href[1];
+                    body.style.background=bodyColor[1];
+                    break;
+                    case 2:
+                    adContainer2.style.background=adContainer2Color[2];
+                    adContainer2.href=adContainer2Href[2];
+                    body.style.background=bodyColor[2];
+                    break;
+                    case 3:
+                    adContainer2.style.background=adContainer2Color[3];
+                    adContainer2.href=adContainer2Href[3];
+                    body.style.background=bodyColor[3];
+                    break;
+                    case 4:
+                    adContainer2.style.background=adContainer2Color[4];
+                    adContainer2.href=adContainer2Href[4];
+                    body.style.background=bodyColor[4];
+                    break;
+                    
+
+
+                }
+                number++
+               
+            }else{
+                adContainer1[number].scrollIntoView({behavior:"smooth"})
+                adContainer2.style.background=adContainer2Color[5];
+                adContainer2.href=adContainer2Href[5];
+                body.style.background=bodyColor[5];
+                    setTimeout(function(){
+                        adContainer1[0].scrollIntoView({behavior:"auto"})
+                        //adContainer2.style.background=Color[4];
+                    },t-80)
+                number = 1
+                
+                
+            }
+            
+        }
+
+        setInterval(f1,t)
+        f1()
+    </script>
+    <script>
+        /**/
+        var model1 = document.querySelector(".model1")
+        var model2 = document.querySelector(".model2")
+        var modelcontent = document.querySelector(".modelcontent")
+        
+        model2.style.borderBottom='none'
+        model2.style.color='rgba(174, 175, 183, 1)'
+        //model2.style.color='rgba(174, 175, 183, 1)'
+        model1.onclick = function (){
+            model1.style.borderBottom='.0966rem solid red'
+            //model1.style.color='#000'
+            //model2.style.color='rgba(174, 175, 183, 1)'
+            model2.style.borderBottom='none'
+        }
+        model2.onclick = function (){
+            model1.style.borderBottom='none'
+            //model1.style.color='rgba(174, 175, 183, 1)'
+            //model2.style.color='#000'
+            model2.style.borderBottom='.0966rem solid red'
+           
+        }
+        modelcontent.onscroll = function(){
+            var modelcontentscrollLeft = document.querySelector(".modelcontent").scrollLeft
+
+            //console.log("modelcontentscrollLeft: "+modelcontentscrollLeft)
+            if(modelcontentscrollLeft >= 10){
+                model1.style.borderBottom='none'
+                model2.style.borderBottom='.0966rem solid red'
+
+
+                model1.style.color='rgba(174, 175, 183, 1)'
+                model2.style.color='#000'
+            }else if(modelcontentscrollLeft >= 0 && modelcontentscrollLeft < 10){
+                model1.style.borderBottom='.0966rem solid red'
+                model2.style.borderBottom='none'
+
+
+                model1.style.color='#000'
+                model2.style.color='rgba(174, 175, 183, 1)'
+            }
+
+            /*
+            if(model2.style.borderBottom == ""){
+
+                model1.style.color='#000'
+                model2.style.color='rgba(174, 175, 183, 1)'
+            }else{
+                model1.style.color='rgba(174, 175, 183, 1)'
+                model2.style.color='#000'
+            }*/
+        }
+
+        
+
+    </script>
+</body>
+</html>
