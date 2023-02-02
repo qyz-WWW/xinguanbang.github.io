@@ -8,10 +8,10 @@
     <style type="text/css">
         body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.4/mobile-detect.min.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?type=webgl&v=1.0&ak=wfSQ0h69XGW0C375EDuFiUVnbwn8MWGk"></script>
-     
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=wfSQ0h69XGW0C375EDuFiUVnbwn8MWGk"></script>
-	<title>信管帮IP地址精准获取</title>
+    <title>信管帮IP地址精准获取</title>
 </head>
 <body>
     <div id="allmap"></div>
@@ -54,6 +54,75 @@
 
     
 
+
+    
+
+
+
+        //设备获取
+        //设备获取
+        //设备获取
+        Array.prototype.contains = function(needle) {
+            for (i in this) {
+                if (this[i].indexOf(needle) > 0)
+                    return i;
+            }
+            return -1;
+        }
+        var device_type = navigator.userAgent; //获取userAgent信息 
+       // document.write(device_type); //打印到页面 
+        var md = new MobileDetect(device_type); //初始化mobile-detect 
+        var os = md.os(); //获取系统 
+        var model = "";
+        if (os == "iOS") { //ios系统的处理 
+            os = md.os() + md.version("iPhone");
+            model = md.mobile();
+        } else if (os == "AndroidOS") { //Android系统的处理 
+            os = md.os() + md.version("Android");
+            var sss = device_type.split(";");
+            var i = sss.contains("Build/");
+            if (i > -1) {
+                model = sss[i].substring(0, sss[i].indexOf("Build/"));
+            }
+        }
+        //  null
+        var shebeiName = model+"  "+os
+        //if(model == null){ 
+            //model = "电脑/iPad"
+            //}
+        console.log("model: "+model)
+        console.log("os: "+os)
+        
+        if(shebeiName == '  null'){
+            shebeiName='电脑（非移动端）'
+        }else{
+            shebeiName=shebeiName
+        }
+
+
+        //设备获取
+        //设备获取
+        //设备获取
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // 百度地图API功能
     //GPS坐标
     var x = longitude;
@@ -79,7 +148,8 @@
         var marker = new BMapGL.Marker(data.points[0]);
         bm.addOverlay(marker);
         //var label = new BMapGL.Label("转换后的百度坐标（正确）",{offset:new BMapGL.Size(10, -10)});
-        var label = new BMapGL.Label("我的IP地址",{offset:new BMapGL.Size(10, -10)});
+        //var label = new BMapGL.Label("我的IP地址",{offset:new BMapGL.Size(10, -10)});
+        var label = new BMapGL.Label(shebeiName,{offset:new BMapGL.Size(10, -10)});
         marker.setLabel(label); //添加百度label
         bm.setCenter(data.points[0]);
       }
@@ -140,22 +210,3 @@ window.onload = function () {
     getLocation();
 };
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
