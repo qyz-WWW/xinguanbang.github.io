@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.4/mobile-detect.min.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?type=webgl&v=1.0&ak=wfSQ0h69XGW0C375EDuFiUVnbwn8MWGk"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=wfSQ0h69XGW0C375EDuFiUVnbwn8MWGk"></script>
-    <title>信管帮IP地址获取测试版</title>
+    <title>信管帮IP地址精准获取</title>
 </head>
 <body>
     <div id="allmap"></div>
@@ -119,10 +119,12 @@
 
 
 
-        //百度经纬度坐标 112.95166567042934,33.04866948297499
+        //百度转换经纬度坐标 112.95166567042934,33.04866948297499
         //gps经纬度坐标 112.9393,33.0446
         //X: bds>gps bds - gps = 0.01236
         //Y: bds>gps bds - gps = 0.00406
+        //gps经纬度坐标2: 112.951675,33.048651(弃)
+        
 
 
 
@@ -140,9 +142,10 @@
     var y = latitude;
     var ggPoint = new BMapGL.Point(x,y);
     //设置参考坐标
-    var x1 = 112.9393;
-    var y1 = 33.0446;
-    var ggPoint1 = new BMapGL.Point(x,y);
+    var x1 = 112.95166755170469;
+    var y1 = 33.048666681614144;
+    var ggPoint1 = new BMapGL.Point(x1,y1);
+    //var ggPoint2 = {lng: 112.95166755170469, lat: 33.048666681614144};
 
     //地图初始化
     var bm = new BMapGL.Map("allmap");
@@ -168,21 +171,35 @@
     //bm.addControl(new BMapGL.ZoomControl());
         /**/
     //添加gps marker和label
+    //var markergg = new BMapGL.Marker(ggPoint1);
     var markergg = new BMapGL.Marker(ggPoint1);
     bm.addOverlay(markergg); //添加GPS marker
-    var labelgg = new BMapGL.Label("未转换的GPS坐标（错误）",{offset:new BMapGL.Size(10, -10)});
+    var labelgg = new BMapGL.Label("未转换的GPS坐标（错误）手动转换1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",{offset:new BMapGL.Size(10, -10)});
     markergg.setLabel(labelgg); //添加GPS label
 
     //坐标转换完之后的回调函数
     translateCallback = function (data){
       if(data.status === 0) {
         var marker = new BMapGL.Marker(data.points[0]);
+        console.log("|||||||||||||||||||||||||||||||||||||||");
+        console.log("data.points[0]");
+        console.log(data.points[0]);
+        console.log("data.points[0].lng");
+        console.log(data.points[0].lng);
+        console.log("data.points[0].lat");
+        console.log(data.points[0].lat);
+        console.log("data.points");
+        console.log(data.points);
         bm.addOverlay(marker);
         //var label = new BMapGL.Label("转换后的百度坐标（正确）",{offset:new BMapGL.Size(10, -10)});
         //var label = new BMapGL.Label("我的IP地址",{offset:new BMapGL.Size(10, -10)});
         var label = new BMapGL.Label(shebeiName+"||"+longitude+","+latitude,{offset:new BMapGL.Size(10, -10)});
         marker.setLabel(label); //添加百度label
         bm.setCenter(data.points[0]);
+
+        setTimeout(function(){
+            alert("Gx|"+x+" Gy|"+y+" lng|"+data.points[0].lng+" lat|"+data.points[0].lat);
+        },1000)
       }
     }
 
