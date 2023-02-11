@@ -39,6 +39,9 @@
     recognition.onresult = function({ results }) {
       // 设置一些比较简单的回复
       const answers = {
+        '你好': '你好呀！很高兴认识你',
+        '嗯': '嗯呐嗯呐',
+        '哈哈': '哈哈，看来你很开心',
         '今天是星期几': '今天是星期六',
         '今天天气怎么样': '今天天气晴朗'
       }
@@ -46,7 +49,7 @@
       // 设置一个阈值分别处理
       if( confidence * 100 >= 90 ) {
         //speak(answers[transcript] || '这件事我还不知道，换个问题吧')
-        speak(answers[transcript] || '这件事我还不知道，换个问题吧','听又听不懂，学又学不会，别问了')
+        speak(answers[transcript] || '这件事我还不知道，我劝你换个问题或者换种说法吧','听又听不懂，学又学不会，别问了')
         status.innerText = `语音回复的内容：${ answers[transcript] || '这件事我还不知道，换个问题吧' }`
       } else {
         speak('我好像没听明白')
