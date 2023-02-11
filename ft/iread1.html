@@ -2,7 +2,7 @@
 <head lang="zh-CN">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>语音助手4</title>
+  <title>语音助手5</title>
 </head>
 <body>
   <button type="button" onclick="recognition.start()">点击识别语音</button>
@@ -39,7 +39,9 @@
     recognition.onresult = function({ results }) {
       // 设置一些比较简单的回复
       const answers = {
-        '你是谁': '我叫信管帮助力孙戎，你可以叫我小孙，我是张辉的好大儿',
+        '你是谁': '我叫信管帮助理孙戎，你可以叫我小孙，我是张辉的好大儿',
+        '你叫什么': '我叫信管帮助理孙戎，你可以叫我小孙，我是张辉的好大儿',
+        '你叫什么名字': '我叫信管帮助理孙戎，你可以叫我小孙，我是张辉的好大儿',
         '小孙': '在呐在呐',
         '小孙': '我在',
         '你好小孙': '你好呀！',
