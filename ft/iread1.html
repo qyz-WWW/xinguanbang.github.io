@@ -45,7 +45,8 @@
       const { transcript, confidence } = results[0][0]
       // 设置一个阈值分别处理
       if( confidence * 100 >= 90 ) {
-        speak(answers[transcript] || '这件事我还不知道，换个问题吧')
+        //speak(answers[transcript] || '这件事我还不知道，换个问题吧')
+        speak(answers[transcript] || '这件事我还不知道，换个问题吧','听又听不懂，学又学不会，别问了')
         status.innerText = `语音回复的内容：${ answers[transcript] || '这件事我还不知道，换个问题吧' }`
       } else {
         speak('我好像没听明白')
