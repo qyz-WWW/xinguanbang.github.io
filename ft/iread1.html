@@ -2,7 +2,7 @@
 <head lang="zh-CN">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>语音助手2</title>
+  <title>语音助手3</title>
 </head>
 <body>
   <button type="button" onclick="recognition.start()">点击识别语音</button>
@@ -39,7 +39,7 @@
     recognition.onresult = function({ results }) {
       // 设置一些比较简单的回复
       const answers = {
-        '你好': '你好呀！很高兴认识你',
+        '你好': '你好呀！很高兴认识你'||'你好呀！',
         '嗯': '嗯呐嗯呐',
         '哈哈': '哈哈，看来你很开心',
         '今天是星期几': '今天是星期六',
