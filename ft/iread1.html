@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head lang="zh-CN">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>语音助手</title>
+</head>
+<body>
+  <button type="button" onclick="recognition.start()">点击识别语音</button>
+  <p id="status"></p>
+  <p id="output"></p>
+  <script type="text/javascript">
+    function speak(sentence) {
+      const utterance = new SpeechSynthesisUtterance(sentence)
+      window.speechSynthesis.speak(utterance)
+    }
+    // 目前只有Chrome和Edge支持该特性，在使用时需要加私有化前缀
+    const SpeechRecognition = window.webkitSpeechRecognition
+    const recognition = new SpeechRecognition()
+    const output = document.getElementById("output")
+    const status = document.getElementById("status")
+    // 语音识别开始的钩子
+    recognition.onstart = function() {
+      output.innerText = ''
+      status.innerText = '语音识别开始'
+    }
+    // 如果没有声音则结束的钩子
+    recognition.onspeechend = function() {
+      recognition.stop()
+    }
+    // 识别错误的钩子
+    recognition.onerror = function({ error }) {
+      const errorMessage = {
+        'not-speech': '未检测到声源',
+        'not-allowed': '未检测到麦克风设备或未允许浏览器使用麦克风'
+      }
+      status.innerText = errorMessage[ error ] || '语音识别错误'
+    }
+    // 识别结果的钩子
+    recognition.onresult = function({ results }) {
+      // 设置一些比较简单的回复
+      const answers = {
+        '今天是星期几': '今天是星期六',
+        '今天天气怎么样': '今天天气晴朗'
+      }
+      const { transcript, confidence } = results[0][0]
+      // 设置一个阈值分别处理
+      if( confidence * 100 >= 90 ) {
+        speak(answers[transcript] || '这件事我还不知道，换个问题吧')
+        status.innerText = `语音回复的内容：${ answers[transcript] || '这件事我还不知道，换个问题吧' }`
+      } else {
+        speak('我好像没听明白')
+        status.innerText = `我好像没听明白`
+      }
+    }
+  </script>
+</body>
+</html>
