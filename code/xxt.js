@@ -118,7 +118,7 @@ document.getElementById("siteName").style.display='none';
                             },300)
 
                         },300)
-}
+
 
 
 
@@ -131,3 +131,4 @@ document.getElementById("siteName").style.display='none';
             },300)
         //},500)
     },3000)
+}
