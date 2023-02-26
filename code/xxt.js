@@ -1,4 +1,5 @@
- document.getElementById("siteName").style.display='none';
+ window.onload=function(){
+document.getElementById("siteName").style.display='none';
     document.getElementsByClassName("space-unit")[0].style.width='60px';
     document.getElementsByClassName("space-unit")[0].style.height='60px';
     document.getElementsByClassName("space-unit")[0].style.marginTop='10px';
@@ -117,6 +118,7 @@
                             },300)
 
                         },300)
+}
 
 
 
