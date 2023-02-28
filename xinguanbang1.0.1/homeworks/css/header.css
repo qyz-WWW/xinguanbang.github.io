@@ -1,0 +1,54 @@
+header{
+            height: 1.5116rem;
+            display: flex;
+            /*子元素垂直居中
+            align-items: center;*/
+            position: relative;
+            background-color: #ffffff;
+            box-shadow: 0rem .15rem .15rem rgba(128, 128, 128, 0.201);
+        }
+        header .title{
+            /*
+            border: 1px solid red;*/
+            display: inline-block;
+            /**/
+            width: 7rem;
+            height: .3865rem;
+            font-size: .3865rem;
+            font-weight: 600;
+            /*水平居中
+            margin: 0 auto;*/
+            /*文本水平垂直居中*/
+            text-align: center;
+            line-height: .3865rem;
+            letter-spacing: .025rem;
+            /*位置*/
+            position: absolute;
+            bottom: .3382rem;
+            left: 50%;
+            transform: translateX(-3.5rem);
+
+        }
+        header .left{
+            width: .628rem;
+            height: .628rem;
+            background-image: url(../images/header/left.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            /*位置*/
+            position: absolute;
+            bottom: .2174rem;
+            left: .2174rem;
+
+        }
+        header .backBtn{
+            width: 1.1rem;
+            height: 1.1rem;
+            
+            /*位置*/
+            position: absolute;
+            bottom: 0rem;
+            left: 0rem;
+            position: absolute;
+            z-index: 100;
+        }
