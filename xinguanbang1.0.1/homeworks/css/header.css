@@ -32,7 +32,7 @@ header{
         header .left{
             width: .628rem;
             height: .628rem;
-            background-image: url(../images/header/left.png);
+            background-image: url(../images/header/left.PNG);
             background-size: contain;
             background-repeat: no-repeat;
             /*位置*/
