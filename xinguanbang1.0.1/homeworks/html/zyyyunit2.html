@@ -22,7 +22,7 @@
             width: 0rem;
         }
         body{
-            background: #f7f7f7;
+            background: #f6f6f6a1;
             display: flex;
             flex-direction: column;
             
@@ -48,30 +48,40 @@
             /*
             border: 1px solid red;*/
             margin-left: 5%;
-            font-size: .4348rem;/*18px*/
+            font-size: .3865rem;/*16px*/
             color: #929292;
         }
         .container .ul1{
             /*
             border: 1px solid red;*/
+            border-radius: .2415rem;/*10px*/
+            /*
+            box-shadow: .2415rem .2415rem .2415rem rgb(190, 190, 190);
+            */
             width: 90%;
             font-size: .3865rem;/*16px*/
-            line-height: .9662rem;/*40px*/
+            line-height: 1.087rem;/*45px*/
             margin: .2415rem auto;
         }
         .container .ul1 li{
             /*
             border: 1px solid red;*/
-            height: .9662rem;/*40px*/
+            height: 1.087rem;/*45px*/
             /*
             text-align: center;*/
-            border-bottom: .0242rem solid rgba(185, 185, 185, 0.429);
+            border-bottom: .0121rem solid rgba(185, 185, 185, 0.429);
         }
         .container .ul1 li:nth-child(even){
-            background-color: #f1f1f1b8;
+            background-color: #f2f2f2;
         }
         .container .ul1 li:nth-child(odd){
-            background-color: #b3f1ff64;
+            background-color: #b3e7ff70;
+        }
+        .container .ul1 li:first-child{
+            border-radius: .2415rem .2415rem 0 0;/*10px*/
+        }
+        .container .ul1 li:last-child{
+            border-radius: 0 0 .2415rem .2415rem;/*10px*/
         }
         .ul1 li span:nth-child(1){
             /*
@@ -85,16 +95,18 @@
             /*
             border: 1px solid rgb(0, 255, 81);*/
             display: inline-block;
-            color: #72b2fffa;
+            color: #59a4fffa;
             
             letter-spacing: .0242rem;
             font-weight: 600;
         }
         textarea{
             box-sizing: border-box;
+            border-radius: .2415rem;/*10px*/
             width: 90%;
             margin: .2415rem 5%;
             padding: .2415rem;
+            
         }
         #copyBtn{
             width: 4.8309rem;/*200px*/
@@ -232,7 +244,7 @@
                     
                 }*/
                 function copy1(i){
-                    //clearInterval(t2);
+                    
                     //var _i=document.getElementById("'"+i+"'").innerText;
                     var title = document.querySelector("header .title")
                     var vi=document.querySelectorAll(".ul1 li span:nth-child(2)")[i-1]
