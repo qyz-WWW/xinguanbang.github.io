@@ -48,21 +48,21 @@
             /*
             border: 1px solid red;*/
             margin-left: 5%;
-            font-size: .4831rem;/*20px*/
-            color: #626262;
+            font-size: .4348rem;/*18px*/
+            color: #929292;
         }
         .container .ul1{
             /*
             border: 1px solid red;*/
             width: 90%;
             font-size: .3865rem;/*16px*/
-            line-height: .8454rem;/*35px*/
+            line-height: .9662rem;/*40px*/
             margin: .2415rem auto;
         }
         .container .ul1 li{
             /*
             border: 1px solid red;*/
-            height: .8454rem;/*35px*/
+            height: .9662rem;/*40px*/
             /*
             text-align: center;*/
             border-bottom: .0242rem solid rgba(185, 185, 185, 0.429);
@@ -77,8 +77,18 @@
             /*
             border: 1px solid red;*/
             display: inline-block;
-            width: 60%;
-            margin-left: .2415rem;/*10px*/
+            width: 55%;
+            color: #363636;
+            margin-left: .6039rem;/*25px*/
+        }
+        .ul1 li span:nth-child(2){
+            /*
+            border: 1px solid rgb(0, 255, 81);*/
+            display: inline-block;
+            color: #72b2fffa;
+            
+            letter-spacing: .0242rem;
+            font-weight: 600;
         }
         textarea{
             box-sizing: border-box;
@@ -114,9 +124,10 @@
         document.querySelector(".backBtn").onclick=function(){
             window.history.go(-1)
         }
+        /*
         document.querySelector(".right").onclick=function(){
             window.location.replace('./index.html')
-        }
+        }*/
     </script>
 
     <section>
@@ -127,80 +138,139 @@
             <ul class="ul1">
                 <li>
                     <span>n.生产力 p_</span>
-                    <span>productivity</span>
+                    <span onclick="copy1(1)">productivity</span>
                 </li>
                 
                 <li>
                     <span>n.公司 （合伙）商号 f_</span>
-                    <span>firm</span>
+                    <span onclick="copy1(2)">firm</span>
                 </li>
                 
                 <li>
                     <span>adj.多国的，跨国的... m_</span>
-                    <span>multinational</span>
+                    <span onclick="copy1(3)">multinational</span>
                 </li>
                 
                 <li>
                     <span>vt.利用 u_</span>
-                    <span>utilize</span>
+                    <span onclick="copy1(4)">utilize</span>
                 </li>
                 
                 <li>
                     <span>n.全球化，全球性 g_</span>
-                    <span>globalization</span>
+                    <span onclick="copy1(5)">globalization</span>
                 </li>
                 
                 <li>
                     <span>adj.灵活的，柔软的... f_</span>
-                    <span>flexible</span>
+                    <span onclick="copy1(6)">flexible</span>
                 </li>
                 
                 <li>
                     <span>n.投资，可获利的东西 i_</span>
-                    <span>investment</span>
+                    <span onclick="copy1(7)">investment</span>
                 </li>
                 
                 <li>
                     <span>n.利润，益处... p_</span>
-                    <span>profit</span>
+                    <span onclick="copy1(8)">profit</span>
                 </li>
                 
                 <li>
                     <span>adj.固有的，内在的... i_</span>
-                    <span>inherent</span>
+                    <span onclick="copy1(9)">inherent</span>
                 </li>
                 
                 <li>
                     <span>n.收益性，利益率 p_</span>
-                    <span>profitability</span>
+                    <span onclick="copy1(10)">profitability</span>
                 </li>
                 
                 <li>
                     <span>n.竞争者 c_</span>
-                    <span>competitor</span>
+                    <span onclick="copy1(11)">competitor</span>
                 </li>
                 
                 <li>
                     <span>vt.强调，着重 e_</span>
-                    <span>emphasize</span>
+                    <span onclick="copy1(12)">emphasize</span>
                 </li>
                 
                 <li>
                     <span>n.装配，集结... a_</span>
-                    <span>assembly</span>
+                    <span onclick="copy1(13)">assembly</span>
                 </li>
                 
                 <li>
                     <span>n.资产 a_</span>
-                    <span>asset</span>
+                    <span onclick="copy1(14)">asset</span>
                 </li>
                 
                 <li>
                     <span>n.扩散，传播 d_</span>
-                    <span>diffusion</span>
+                    <span onclick="copy1(15)">diffusion</span>
                 </li>
                 
             </ul>
+            <!-- 点击单词复制 -->
+            <script>
+                /*
+                function copy2(i){
+                    //var i = a-1;
+                    //var word = document.querySelectorAll(".ul1 li span:nth-child(2)")[i].innerHTML
+                    //var element = document.querySelectorAll(".ul1 li span:nth-child(2)")[i];
+                    console.log("传参i："+i)
+                    var element = document.getElementById('2');
+                    console.log(element);
+                    element.select;
+                    element.setSelectionRange(0, element.innerHTML.length);
+                    document.execCommand('copy');
+                    //console.log("typeof words:"+typeof word)
+                    //console.log(word)
+                    
+
+                    
+                }*/
+                function copy1(i){
+                    //clearInterval(t2);
+                    //var _i=document.getElementById("'"+i+"'").innerText;
+                    var title = document.querySelector("header .title")
+                    var vi=document.querySelectorAll(".ul1 li span:nth-child(2)")[i-1]
+                    var _i=document.querySelectorAll(".ul1 li span:nth-child(2)")[i-1].innerHTML
+                    var oInput = document.createElement('input');
+                    oInput.value = _i;
+                    document.body.appendChild(oInput);
+                    oInput.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(oInput);
+                    //复制成功后视觉提示
+                    title.innerHTML = '已复制 '+_i
+                    vi.innerHTML='已复制'
+                    vi.style.color='#ff2727fa'
+                    /*
+                    setTimeout(function(){
+                        title.innerHTML='专业英语本院2023上-unit2'
+                    },5000)
+                    setTimeout(function(){
+                        vi.style.color='#72b2fffa'
+                        vi.innerHTML=_i
+                    },800)
+                    */
+                    //clearInterval(t2); 
+                    setTimeout(function(){
+                        vi.style.color='#72b2fffa'
+                        vi.innerHTML=_i
+                        setTimeout(function(){
+                            title.innerHTML='专业英语本院2023上-unit2'
+                        },8000)
+                    },800)
+
+                    
+                    
+                    
+                }
+
+            </script>
             <!-- 简答题 -->
             <span class="t t2">简答题</span>
             <br>
@@ -222,7 +292,7 @@
                     setTimeout(function(){
                         copyBtn.style.background='#4099ff'
                         copyBtn.innerHTML='一键复制'
-                    },3500)
+                    },2000)
                 }
             </script>
         </div>
