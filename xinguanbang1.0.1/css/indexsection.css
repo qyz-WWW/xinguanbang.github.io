@@ -1,0 +1,82 @@
+.coursebox{
+    border: .0242rem solid rgb(0, 0, 0);
+    border-radius: .1932rem;
+    box-shadow: .2415rem .2415rem .2415rem rgba(0, 0, 0, 0.342);
+    /*
+    background: rgb(247, 255, 17);*/
+    width: 9.3961rem;
+    height: 7.2947rem;
+    animation: coursebox 8s infinite;
+}
+/*临时样式*/
+.coursebox span{
+    /*
+    border: 1px solid red;*/
+    font-size: 0.45rem;
+    color: #FFF;
+}
+@keyframes coursebox{
+    0%{
+        transform: scale(0.95);
+        box-shadow: none;
+    }
+    5%{
+        transform: scale(1);
+        box-shadow: .2415rem .2415rem .2415rem rgba(0, 0, 0, 0.342);
+    }
+    10%{
+        transform: scale(0.95);
+        box-shadow: none;
+    }
+    90%{
+        transform: scale(0.95);
+        box-shadow: none;
+    }
+    95%{
+        transform: scale(1);
+        box-shadow: .2415rem .2415rem .2415rem rgba(0, 0, 0, 0.342);
+    }
+    100%{
+        transform: scale(0.95);
+        box-shadow: none;
+    }
+}
+
+.modelbox{
+    /**/
+    border: .0242rem solid rgb(0, 255, 217);
+    border-radius: .314rem .314rem 0 0;
+    width: 100%;
+    /*
+    height: 28.9855rem;*/
+    
+    /**/
+    flex: 1;
+    margin-top: .6763rem;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+.modelbox a{
+    /**/
+    border: .0242rem solid #000;
+    border-radius: .1208rem;
+    display: inline-block;
+    width: 3.6232rem;
+    height: 1.4493rem;
+    font-size: .4589rem;
+    margin: .2415rem auto;
+    text-align: center;
+    line-height: 1.4493rem;
+}
+.modelbox a:first-child{
+    
+    margin-top: .9662rem;
+    
+}
+
+
+
