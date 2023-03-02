@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>建议使用信管帮APP</title>
+    <!-- 
+        主题色：
+        1. body 
+        2. 
+    
+    -->
+    <link rel="stylesheet" href="../css/index_lunbotu1.css">
+    <link rel="stylesheet" href="../css/indexsection.css">
     <style>
         *{
             margin: 0;
@@ -12,10 +20,8 @@
         }
         html,body{
             height: 100%;
-            
-            
-            
-            
+
+
             -webkit-user-select:none;
             -moz-user-select:none;
             -ms-user-select:none;
@@ -24,85 +30,39 @@
         ul li{
             list-style: none;
         }
+        a{
+            text-decoration: none;
+        }
+        ::-webkit-scrollbar{
+            /* width: 0; 移动端取消滚动条无效*/
+            display: none;
+        }
         body{
             user-select: none;
-            background: #f3f3f3;
+            /*
+            background-color: #da434d;*/
+            background-color: rgba(125, 19, 6, 1);
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: rgb(243, 60, 60);
+            
         }
-        li a{
-            user-select: none;
-            display: inline-block;
-            width: 5rem;
-            height: 1.8rem;
-            text-decoration: none;
-            font-size: 0.5rem;
-            background: #fff;
-            border-radius: 0.4rem;
-            box-shadow: .2633rem .2633rem .1433rem #b2b2b2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        li a:hover{
-            background: rgb(255, 163, 163);
-            color: #fff;
-        }
-        ul{
-            user-select: none;
-            width: 5.3333rem;
-            height: 10rem;
+        section{
+            /*
+            border: .0742rem solid rgb(0, 255, 251);*/
+            /*填充剩余高度*/
+            flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
             align-items: center;
+            
+            
+        }
 
-        }
+
+        
     </style>
-    <!-- 参数接收处理 ?test=logo-->
-    <script>
-        window.onload=function(){
-            let params1 = location.search.substr(1)//去除链接含参部分的问号 >> test=logo
-            console.log("去？ params1: "+params1)
-            console.log("typeof params1: "+typeof params1)
-            let test1 = params1.split('=') // >> test,logo 对象数据类型
-            console.log("去= test1: "+test1)
-            console.log("typeof test1: "+typeof test1)
-            let test = test1[1]
-            console.log("test: "+test)
-            console.log("typeof test: "+typeof test)
-            switch(test){
-                case 'logo':
-                var a1 = document.querySelector('ul li:nth-child(1) a')
-                a1.innerHTML='logo测试正常!'
-                a1.style.background='#1ad315'
-                a1.style.color='#fff'
-                break;
-                case 'ad':
-                var a2 = document.querySelector('ul li:nth-child(2) a')
-                a2.innerHTML='广告测试正常!'
-                a2.style.background='#1ad315'
-                a2.style.color='#fff'
-                break;
-                case '404':
-                var a3 = document.querySelector('ul li:nth-child(3) a')
-                a3.innerHTML='404测试正常!'
-                a3.style.background='#1ad315'
-                a3.style.color='#fff'
-                break;
-                default:
-                break;
-                
-
-            }
-        }
-        
-
-        
-    </script>
+    
+    
 
 
 
@@ -110,13 +70,39 @@
 
 </head>
 <body>
-    基础测试1
-    <ul>
-        <li><a href="./editxck.html">行程卡1.0</a></li>
-        <li><a href="https://sourl.cn/Mwckxm">专业英语</a></li>
+    <div class="adContainer">
+            <a class="adContainer1"></a>
+<!--             
+            <a class="adContainer1"></a>
+            <a class="adContainer1"></a>
+            <a class="adContainer1"></a>
+            <a class="adContainer1"></a>
+            <a class="adContainer1"></a>
+             -->
+
+            <a class="adContainer2"></a> 
+    </div>
+    <section>
+        <!-- 课表提醒 -->
+        <div class="coursebox" style="padding: 5%; box-sizing: border-box;">
+            <span>
+                &emsp;&emsp;当前为软件测试阶段，资源对外开放，若出现页面布局不兼容、跳转失败等异常情况请及时反馈具体问题。点击下载&nbsp;<a style="color: #fc80ff" href="https://XGStudio2023.github.io/download">信管帮APP</a>(安卓版)
+            </span>
+
+        </div>
         
-    </ul>
-    <span style="width: 8rem;margin-top:1rem;font-size: 0.3rem;line-height:0.5rem;">&emsp;&emsp;当前为软件测试阶段，资源对外开放，若出现页面布局不兼容、跳转失败等异常情况请及时反馈具体问题。点击下载&nbsp;<a href="https://XGStudio2023.github.io/download">信管帮APP</a></span>
+
+        <!-- 内容模块区域 -->
+        <div class="modelbox">
+            <a href="../homeworks/html/zyyy.html">专业英语</a>
+            <a href="./editxck.html">行程卡</a>
+            
+        </div>
+        
+    </section>
+
+
+    
 
 
 
@@ -130,7 +116,136 @@
         resetHtmlFont();
         //如果窗口大小改变了，则重新计算基础font-size
         window.onresize = resetHtmlFont;
-        
     </script>
+    <!-- 
+    <script>
+        //document.getElementsByClassName("item")[2].scrollIntoView({behavior:'smooth'})
+        //自动滚动
+        var n = document.getElementsByClassName("adContainer1").length //n 总图片数量
+        var t = 6000 //时间间隔
+        var number = 0
+
+        var adContainer2Color = ['linear-gradient(to top,#D9434D 0%,rgba(218, 67, 77, 0) 25%)','linear-gradient(to top,rgba(125, 19, 6, 1) 0%,rgba(125, 19, 6, 0) 25%)','linear-gradient(to top,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0)','linear-gradient(to top,rgba(38, 63, 0, 1) 0%,rgba(38, 63, 0, 0) 25%)','linear-gradient(to top,#4B4CD6 0%,rgba(75, 76, 214, 0) 25%)','linear-gradient(to top,#D9434D 0%,rgba(218, 67, 77, 0) 25%)']
+        var adContainer2Href = ['https://pro.m.jd.com/mall/active/4W28Z2kFoEnYPPttQJqqNNsc2s28/index.html?bd_vid=8800155284773407438','https://www.huat.edu.cn/','./editxck.html','http://sheqi.01ny.cn/index.php?m=content&c=index&a=show&catid=214&id=56107','./666','https://pro.m.jd.com/mall/active/4W28Z2kFoEnYPPttQJqqNNsc2s28/index.html?bd_vid=8800155284773407438']
+        var bodyColor = ['#D9434D','rgba(125, 19, 6, 1)','rgba(255, 255, 255, 1)','rgba(38, 63, 0, 1)','#4B4CD6','#D9434D']
+        
+        function f1(){
+            
+            
+            var adContainer1 = document.getElementsByClassName("adContainer1") //object
+            //主题颜色
+            var body = document.body
+            var adContainer2 = document.getElementsByClassName("adContainer2")[0]
+
+            if(number < n-1){
+                adContainer1[number].scrollIntoView({behavior:"smooth"})
+                switch(number){
+                    case 0:
+                    adContainer2.style.background=adContainer2Color[0];
+                    adContainer2.href=adContainer2Href[0];
+                    body.style.background=bodyColor[0];
+                    break;
+                    case 1:
+                    adContainer2.style.background=adContainer2Color[1];
+                    adContainer2.href=adContainer2Href[1];
+                    body.style.background=bodyColor[1];
+                    break;
+                    case 2:
+                    adContainer2.style.background=adContainer2Color[2];
+                    adContainer2.href=adContainer2Href[2];
+                    body.style.background=bodyColor[2];
+                    break;
+                    case 3:
+                    adContainer2.style.background=adContainer2Color[3];
+                    adContainer2.href=adContainer2Href[3];
+                    body.style.background=bodyColor[3];
+                    break;
+                    case 4:
+                    adContainer2.style.background=adContainer2Color[4];
+                    adContainer2.href=adContainer2Href[4];
+                    body.style.background=bodyColor[4];
+                    break;
+                    
+
+
+                }
+                number++
+               
+            }else{
+                adContainer1[number].scrollIntoView({behavior:"smooth"})
+                adContainer2.style.background=adContainer2Color[5];
+                adContainer2.href=adContainer2Href[5];
+                body.style.background=bodyColor[5];
+                    setTimeout(function(){
+                        adContainer1[0].scrollIntoView({behavior:"auto"})
+                        //adContainer2.style.background=Color[4];
+                    },t-80)
+                number = 1
+                
+                
+            }
+            
+        }
+
+        setInterval(f1,t)
+        f1()
+    </script>
+    <script>
+        /**/
+        var model1 = document.querySelector(".model1")
+        var model2 = document.querySelector(".model2")
+        var modelcontent = document.querySelector(".modelcontent")
+        
+        model2.style.borderBottom='none'
+        model2.style.color='rgba(174, 175, 183, 1)'
+        //model2.style.color='rgba(174, 175, 183, 1)'
+        model1.onclick = function (){
+            model1.style.borderBottom='.0966rem solid red'
+            //model1.style.color='#000'
+            //model2.style.color='rgba(174, 175, 183, 1)'
+            model2.style.borderBottom='none'
+        }
+        model2.onclick = function (){
+            model1.style.borderBottom='none'
+            //model1.style.color='rgba(174, 175, 183, 1)'
+            //model2.style.color='#000'
+            model2.style.borderBottom='.0966rem solid red'
+           
+        }
+        modelcontent.onscroll = function(){
+            var modelcontentscrollLeft = document.querySelector(".modelcontent").scrollLeft
+
+            //console.log("modelcontentscrollLeft: "+modelcontentscrollLeft)
+            if(modelcontentscrollLeft >= 10){
+                model1.style.borderBottom='none'
+                model2.style.borderBottom='.0966rem solid red'
+
+
+                model1.style.color='rgba(174, 175, 183, 1)'
+                model2.style.color='#000'
+            }else if(modelcontentscrollLeft >= 0 && modelcontentscrollLeft < 10){
+                model1.style.borderBottom='.0966rem solid red'
+                model2.style.borderBottom='none'
+
+
+                model1.style.color='#000'
+                model2.style.color='rgba(174, 175, 183, 1)'
+            }
+
+            /*
+            if(model2.style.borderBottom == ""){
+
+                model1.style.color='#000'
+                model2.style.color='rgba(174, 175, 183, 1)'
+            }else{
+                model1.style.color='rgba(174, 175, 183, 1)'
+                model2.style.color='#000'
+            }*/
+        }
+
+        
+
+    </script>
+     -->
 </body>
 </html>
