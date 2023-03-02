@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>建议使用信管帮APP</title>
+    <link rel="icon" href="https://XGStudio2023.github.io/download/images/appstore1/Xlogo.webp">
+    <link rel="stylesheet" href="../css/header.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+
+
+
+
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        ul li{
+            list-style: none;
+        }
+        ::-webkit-scrollbar{
+            width: 0rem;
+        }
+        body{
+            background: #f6f6f6a1;
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
+        section{
+            /*
+            border: 1px solid red;*/
+
+            
+            /**/
+
+            flex: 1;
+            /*
+            display: flex;
+            justify-content: center;*/
+            /*部分安卓真机header不显示
+            min-height: fit-content;*/
+            overflow-y: scroll;
+
+        }
+        .container .t{
+            /*
+            border: 1px solid red;*/
+            margin-left: 5%;
+            font-size: .3865rem;/*16px*/
+            color: #929292;
+        }
+        .container .ul1{
+            /*
+            border: 1px solid red;*/
+            border-radius: .1208rem;/*5px*/
+            /*
+            box-shadow: .2415rem .2415rem .2415rem rgb(190, 190, 190);
+            */
+            width: 90%;
+            font-size: .3865rem;/*16px*/
+            line-height: 1.087rem;/*45px*/
+            margin: .2415rem auto;
+        }
+        .container .ul1 li{
+            /*
+            border: 1px solid red;*/
+            height: 1.087rem;/*45px*/
+            /*
+            text-align: center;*/
+            border-bottom: .0121rem solid rgba(185, 185, 185, 0.429);
+        }
+        .container .ul1 li:nth-child(even){
+            background-color: #f2f2f2;
+        }
+        .container .ul1 li:nth-child(odd){
+            background-color: #b3e7ff70;
+        }
+        .container .ul1 li:first-child{
+            border-radius: .1208rem .1208rem 0 0;/*5px*/
+        }
+        .container .ul1 li:last-child{
+            border-radius: 0 0 .1208rem .1208rem;/*5px*/
+        }
+        .ul1 li span:nth-child(1){
+            /*
+            border: 1px solid red;*/
+            /*special set
+            font-size: .3623rem;*/
+            display: inline-block;
+            width: 55%;
+            color: #363636;
+            margin-left: .6039rem;/*25px*/
+        }
+        .ul1 li span:nth-child(2){
+            /*
+            border: 1px solid rgb(0, 255, 81);*/
+            display: inline-block;
+            color: #59a4fffa;
+            
+            letter-spacing: .0242rem;
+            font-weight: 600;
+        }
+        textarea{
+            box-sizing: border-box;
+            border-radius: .1208rem;/*5px*/
+            width: 90%;
+            margin: .2415rem 5%;
+            padding: .2415rem;
+            
+        }
+        #copyBtn{
+            width: 4.8309rem;/*200px*/
+            height: 1.2077rem;/*50px*/
+            border: none;
+            border-radius: .6039rem;
+            background: #4099ff;
+            color: #fff;
+            font-size: .4348rem;/*18px*/
+            margin-left: 50%;
+            margin-bottom: 7.2464rem;/*300*/
+            transform: translateX(-2.4155rem);
+            letter-spacing: .0483rem;
+            
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="backBtn"></div>
+        <div class="left"></div>
+        <span class="title">专业英语本院2023上-unit3</span>
+    </header>
+    <script>
+        document.querySelector(".backBtn").onclick=function(){
+            window.history.go(-1)
+        }
+        /*
+        document.querySelector(".right").onclick=function(){
+            window.location.replace('./index.html')
+        }*/
+    </script>
+
+    <section>
+        <div class="container">
+            <!-- 填空题 -->
+            <span class="t t1">填空题</span>
+            <br>
+            <ul class="ul1">
+                <li>
+                    <span>adj.二进制的 b_</span>
+                    <span onclick="copy1(1)">binary</span>
+                </li>
+                
+                <li>
+                    <span>vt.转变，变换 c_</span>
+                    <span onclick="copy1(2)">convert</span>
+                </li>
+                
+                <li>
+                    <span>n.模拟 a_</span>
+                    <span onclick="copy1(3)">analogy</span>
+                </li>
+                
+                <li>
+                    <span>n.应用，应用程序 a_</span>
+                    <span onclick="copy1(4)">application</span>
+                </li>
+                
+                <li>
+                    <span>n.设备 d_</span>
+                    <span onclick="copy1(5)">device</span>
+                </li>
+                
+                <li>
+                    <span>vt.提高，增强 e_</span>
+                    <span onclick="copy1(6)">enhance</span>
+                </li>
+                
+                <li>
+                    <span>n.运转，操作 o_</span>
+                    <span onclick="copy1(7)">operation</span>
+                </li>
+                
+                <li>
+                    <span>n.发射，传送... t_</span>
+                    <span onclick="copy1(8)">transmission</span>
+                </li>
+                
+               
+                
+            </ul>
+            <!-- 点击单词复制 -->
+            <script>
+                /*
+                function copy2(i){
+                    //var i = a-1;
+                    //var word = document.querySelectorAll(".ul1 li span:nth-child(2)")[i].innerHTML
+                    //var element = document.querySelectorAll(".ul1 li span:nth-child(2)")[i];
+                    console.log("传参i："+i)
+                    var element = document.getElementById('2');
+                    console.log(element);
+                    element.select;
+                    element.setSelectionRange(0, element.innerHTML.length);
+                    document.execCommand('copy');
+                    //console.log("typeof words:"+typeof word)
+                    //console.log(word)
+                    
+
+                    
+                }*/
+                function copy1(i){
+                    
+                    //var _i=document.getElementById("'"+i+"'").innerText;
+                    var title = document.querySelector("header .title")
+                    var vi=document.querySelectorAll(".ul1 li span:nth-child(2)")[i-1]
+                    var _i=document.querySelectorAll(".ul1 li span:nth-child(2)")[i-1].innerHTML
+                    var oInput = document.createElement('input');
+                    oInput.value = _i;
+                    document.body.appendChild(oInput);
+                    oInput.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(oInput);
+                    //复制成功后视觉提示
+                    title.innerHTML = '已复制 '+_i
+                    vi.innerHTML='已复制'
+                    vi.style.color='#ff2727fa'
+                    /*
+                    setTimeout(function(){
+                        title.innerHTML='专业英语本院2023上-unit2'
+                    },5000)
+                    setTimeout(function(){
+                        vi.style.color='#72b2fffa'
+                        vi.innerHTML=_i
+                    },800)
+                    */
+                    //clearInterval(t2); 
+                    setTimeout(function(){
+                        vi.style.color='#72b2fffa'
+                        vi.innerHTML=_i
+                        setTimeout(function(){
+                            title.innerHTML='专业英语本院2023上-unit3'
+                        },8000)
+                    },800)
+
+                    
+                    
+                    
+                }
+
+            </script>
+            <!-- 简答题 -->
+            <span class="t t2">简答题</span>
+            <br>
+            <textarea name="" id="txt1" cols="30" rows="10">1. Information technology is the use of technology to enhance the speed and the efficiency of the transfer of information.
+
+2. Before the 1990s, full time researchers having access to the high priced equipment drove most disies in information technology.
+
+3. A personal computer or PC is generally a microcomputer intended to be used by one person at a time, and suitable for genaral purpose tasks such as word processing, programming, editing or playing a personal computer game, and is usually used to run purchased or other software not written by the user.
+
+4. International Business Machines Corporation (IBM) developed the first open standard personal computer (IBM PC launched in US markets in 1981, and the first deliveries to European markets were in 1982 and 1983), which standardized the software development.
+
+5. The Internet was originally conceived as a distributed, fail-proof network that could connect computers together and be unaffected by failure at any point.
+
+6. In 1989.
+
+7. The one characteristic of computer technology that sets it apart from earlier analogy technologies is that it is digital.</textarea>
+            <br>
+            <button id="copyBtn" onclick="copy()">一键复制</button>
+
+
+            <!-- 复制 -->
+            <script>
+                function copy() {
+                    var element = document.getElementById("txt1");
+                    var copyBtn = document.getElementById("copyBtn");
+                    element.select();
+                    element.setSelectionRange(0, element.value.length);
+                    document.execCommand('copy');
+                    copyBtn.style.background='#c0c0c0'
+                    copyBtn.innerHTML='已复制'
+                    setTimeout(function(){
+                        copyBtn.style.background='#4099ff'
+                        copyBtn.innerHTML='一键复制'
+                    },2000)
+                }
+            </script>
+        </div>
+    </section>
+    
+
+
+
+
+
+
+    
+    <script>
+        //根据设备宽度计算html的font-size
+        function resetHtmlFont(){
+            //获取html对象并动态设置font-size = 设备宽度的1/10
+            document.documentElement.style.fontSize = screen.width/10 + 'px';
+        }
+        //执行一下
+        resetHtmlFont();
+        //如果窗口大小改变了，则重新计算基础font-size
+        window.onresize = resetHtmlFont;
+    </script>
+</body>
+</html>
