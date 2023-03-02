@@ -211,6 +211,13 @@
                 <!-- 点击li跳转页面 -->
                 <script>
                     function f2(i){
+                        var b = document.querySelectorAll(".ul1 li")[i-1]
+                        b.style.opacity='0.7'
+                        
+                        setTimeout(function(){
+                            b.style.opacity='1'
+                        },200)
+                        //b.style.opacity='0.7'
                         var a = 'https://xinguanbang.github.io/xinguanbang1.0.1/homeworks/html/'
                         //var a = './'
                         switch (i) {
