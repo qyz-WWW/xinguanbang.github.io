@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>建议使用信管帮APP</title>
+    <link rel="icon" href="https://XGStudio2023.github.io/download/images/appstore1/Xlogo.webp">
+    <link rel="stylesheet" href="../../css/header.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,body{
+            height: 100%;
+
+
+
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        ul li{
+            list-style: none;
+        }
+        ::-webkit-scrollbar{
+            width: 0rem;
+        }
+        body{
+            /*
+            background: #f6f6f6a1;*/
+            background: #58a6ffb0;
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
+        header{
+            background-color: #85beff;
+            color: #fff;
+        }
+        header .left{
+            background-image: url(../../images/header/leftwhite.webp);
+        }
+        section{
+            /*
+            border: 1px solid red;*/
+
+            
+            /**/
+
+            flex: 1;
+            /*
+            display: flex;
+            justify-content: center;*/
+            /*部分安卓真机header不显示
+            min-height: fit-content;*/
+            overflow-y: scroll;
+
+        }
+        .container{
+            /*
+            border: 1px solid rgb(0, 255, 132);*/
+        }
+
+
+        .navigation{
+            /*
+            border: 1px solid rgb(0, 255, 132);*/
+            width: 1.9324rem;
+            height: .9662rem;
+            /*
+            background-color: #ff4646;*/
+            margin: .4831rem auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .navigation span{
+            /*
+            border: 1px solid rgb(0, 255, 132);*/
+            font-size: .4106rem;
+            line-height: .9662rem;
+            letter-spacing: .0483rem;
+            color: #fff;
+        }
+        /**/
+        .navigation .icon{
+            /*
+            border: 1px solid rgb(0, 255, 132);*/
+            width: .4831rem;
+            height: .4831rem;
+            background: url(../../images/icons1/changeicon.webp) no-repeat;
+            background-size: contain;
+            margin-left: .1208rem;
+        }
+        .box{
+            /*
+            border: 2px solid rgb(255, 0, 0);*/
+            width: 90%;
+            margin: 0 auto;
+        }
+        .box .ul1{
+            
+        }
+        .box .ul1 li{
+            /*
+            border: 1px solid rgb(103, 103, 103);*/
+            background: #fff087;
+            color: #5c5c5c;
+            display: flex;
+            justify-content: center;
+            height: 1.6908rem;
+            box-shadow: .1691rem .1691rem .1208rem rgba(128, 128, 128, 0.426);
+
+        }
+        .ul1 .left{
+            /**/
+            border: 1px solid rgb(103, 103, 103);
+
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+
+        }
+        .ul1 .left span:nth-child(1){
+            font-weight: 600;
+            font-size: .4589rem;
+            line-height: .8454rem;
+            letter-spacing: .0242rem;
+        }
+        .ul1 .left span:nth-child(2){
+            /**/
+            border: .0242rem solid red;
+            font-size: .3623rem;
+            letter-spacing: .0242rem;
+        }
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="backBtn"></div>
+        <div class="left"></div>
+        <span class="title">马克思主义基本原理</span>
+    </header>
+    <script>
+        document.querySelector(".backBtn").onclick=function(){
+            window.history.go(-1)
+        }
+        /*
+        document.querySelector(".right").onclick=function(){
+            window.location.replace('./index.html')
+        }*/
+    </script>
+
+    <section>
+        <div class="container">
+            <div class="navigation">
+                <span>本院</span>
+                <!-- <div class="icon" onclick="f1()"></div> -->
+            </div>
+            <!-- <script>
+                function f1(){
+                    //var btn = document.getElementsByClassName("icon")[0]
+                    window.alert("暂无其他学院资源，欢迎投稿！QQ群：934856204")
+                }
+                
+            </script> -->
+
+            <!-- 专业英语本院2023上 -->
+            <div class="box box1">
+                <ul class="ul1">
+                    <li onclick="f2(1)">
+                        <div class="left">
+                            <span>2 世界的物质性及发展规律</span>
+                            <span>2.1、2.2、2.3、2.4、2.5、2.6、2.7</span>
+                        </div>
+                    </li>
+<!--                     
+                    <li onclick="f2(2)">
+                        <div class="left">
+                            <span>专业英语本院2023上-unit2</span>
+                            <span>学习通</span>
+                        </div>
+                    </li>
+
+                    <li onclick="f2(3)">
+                        <div class="left">
+                            <span>专业英语本院2023上-unit3</span>
+                            <span>学习通</span>
+                        </div>
+                    </li> -->
+
+                </ul>
+                <!-- 点击li跳转页面 -->
+                <script>
+                    function f2(i){
+                        var b = document.querySelectorAll(".ul1 li")[i-1]
+                        b.style.opacity='0.7'
+                        
+                        setTimeout(function(){
+                            b.style.opacity='1'
+                        },200)
+                        //b.style.opacity='0.7'
+                        var a = 'https://xinguanbang.github.io/xinguanbang1.0.1/homeworks/html/mkszyjbyl/'
+                        //var a = './'
+                        switch (i) {
+                            case 1:
+                                a=a+'mkszyjbyl2.html';
+                                break;
+                            case 2:
+                                a=a+'zyyyunit2.html';
+                                break;
+                            case 3:
+                                a=a+'zyyyunit3.html';
+                                break;
+                            default:
+                                a=a=a+'zyyyunit1.html';
+                        }
+                        console.log("a: "+a)
+                        //window.location.replace("'"+a+"'")
+                        window.location.href=a
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+
+
+    
+    <script>
+        //根据设备宽度计算html的font-size
+        function resetHtmlFont(){
+            //获取html对象并动态设置font-size = 设备宽度的1/10
+            document.documentElement.style.fontSize = screen.width/10 + 'px';
+        }
+        //执行一下
+        resetHtmlFont();
+        //如果窗口大小改变了，则重新计算基础font-size
+        window.onresize = resetHtmlFont;
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>建议使用信管帮APP</title>
+    <link rel="icon" href="https://XGStudio2023.github.io/download/images/appstore1/Xlogo.webp">
+    <link rel="stylesheet" href="../../css/header.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+
+
+
+
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        ul li{
+            list-style: none;
+        }
+        ::-webkit-scrollbar{
+            width: 0rem;
+        }
+        body{
+            background: #f6f6f6a1;
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
+        section{
+            /*
+            border: 1px solid red;*/
+
+            
+            /**/
+
+            flex: 1;
+            /*
+            display: flex;
+            justify-content: center;*/
+            /*部分安卓真机header不显示
+            min-height: fit-content;*/
+            overflow-y: scroll;
+
+        }
+        .container .t{
+            /**/
+            border: 1px solid red;
+            margin-left: 5%;
+            font-size: .3865rem;/*16px*/
+            color: #929292;
+        }
+        .demo{
+            border: .0242rem solid red;
+            width: 90%;
+            margin: .1208rem auto;
+            margin-bottom: .2899rem;
+            font-size: .4106rem;
+            letter-spacing: .0242rem;
+            line-height: .6039rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .demo .answer{
+            display: inline-block;
+            margin-top: .1208rem;
+            color: #18c518;
+            font-size: .3865rem;
+            font-weight: 600;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="backBtn"></div>
+        <div class="left"></div>
+        <span class="title">马克思主义基本原理-2</span>
+    </header>
+    <script>
+        document.querySelector(".backBtn").onclick=function(){
+            window.history.go(-1)
+        }
+        /*
+        document.querySelector(".right").onclick=function(){
+            window.location.replace('./index.html')
+        }*/
+    </script>
+
+    <section>
+        <div class="container">
+            <!-- 2.1 -->
+            <span class="t t1">2.1</span>
+            <br>
+            <div class="demo">
+                <span>1.[单选题]物质的唯一特性是( )</span>
+                <span style="display: inline-block;">答案：<span class="answer">客观实在性</span></span>
+            </div>
+            
+            <div class="demo">
+                <span>2.[单选题]唯物主义最初的历史形态是( )</span>
+                <span>答案：<span class="answer">朴素唯物主义</span></span>
+            </div>
+            
+            
+            <!-- <br> -->
+            <!-- 2.2 -->
+            <span class="t t2">2.2</span>
+            <br>
+            <div class="demo">
+                <span>1.[单选题]“观念的东西不外乎是移入人的头脑并在人脑中改造过的物质的东西而已”。这就是说( )</span>
+                <span>答案：<span class="answer">意识是客观存在的主观映象</span></span>
+            </div>
+            
+            <div class="demo">
+                <span>2.[单选题]“意识的能动性”或“主观能动性”,就是指( )</span>
+                <span>答案：<span class="answer">意识对于人们改造物质世界的指导作用</span></span>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+
+
+    
+    <script>
+        //根据设备宽度计算html的font-size
+        function resetHtmlFont(){
+            //获取html对象并动态设置font-size = 设备宽度的1/10
+            document.documentElement.style.fontSize = screen.width/10 + 'px';
+        }
+        //执行一下
+        resetHtmlFont();
+        //如果窗口大小改变了，则重新计算基础font-size
+        window.onresize = resetHtmlFont;
+    </script>
+</body>
+</html>
