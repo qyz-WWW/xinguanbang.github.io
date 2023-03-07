@@ -1,1 +1,354 @@
-1
+<!-- 20230307 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>建议使用信管帮APP</title>
+    <!-- 
+        主题色：
+        1. body 
+        2. 
+    
+    -->
+    <link rel="icon" href="https://xinguanbang.github.io/images/web/desktop/images1/icon1/Xlogo.webp">
+
+    <link rel="stylesheet" href="../css/index_lunbotu120230307.css">
+    <link rel="stylesheet" href="../css/footer20230307.css">
+    <link rel="stylesheet" href="../css/indexsection20230307.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+
+
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        ul li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        ::-webkit-scrollbar{
+            /* width: 0; 移动端取消滚动条无效*/
+            display: none;
+        }
+        body{
+            user-select: none;
+            /*
+            background-color: #da434d;*/
+            background-color: rgba(125, 19, 6, 1);
+            display: flex;
+            flex-direction: column;
+            
+        }
+        section{
+            /*
+            border: .0742rem solid rgb(0, 255, 251);*/
+            /*填充剩余高度*/
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+
+
+
+
+
+            /*
+            overflow-y: scroll;*/
+            
+        }
+
+
+        
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.4/mobile-detect.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?type=webgl&v=1.0&ak=wfSQ0h69XGW0C375EDuFiUVnbwn8MWGk"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=wfSQ0h69XGW0C375EDuFiUVnbwn8MWGk"></script>
+    
+
+
+
+
+
+</head>
+<body>
+    <div id="allmap" style="display: none;"></div>
+    <div class="adContainer">
+            <a class="adContainer1"></a>
+<!--             
+            <a class="adContainer1"></a>
+            <a class="adContainer1"></a>
+            <a class="adContainer1"></a>
+            <a class="adContainer1"></a>
+            <a class="adContainer1"></a>
+             -->
+
+            <a class="adContainer2"></a> 
+    </div>
+
+    <section>
+        <!-- 环境状态 -->
+        <div class="condition">
+            <div class="top">
+                <div class="left">
+                    <div class="iconfwq" id="iconfwq"></div>
+                    <!-- 动态插入 -->
+                    <span id="fwq1">服务接收中</span>
+                    <script src="../js/indexfwq1.js"></script>
+                </div>
+                <div class="right" id="shebei">设备获取中</div>
+                <script src="../js/shebei.js"></script>
+            </div>
+            <!-- 动态插入 -->
+            <span id="code1">XGB112.939636-33.066446-112.939636-33.066446</span>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="scontant">
+            <span class="t1">2020级</span>
+            <ul class="ul1">
+                <li>
+                    <div style="background-image: url(https://p.ananas.chaoxing.com/star3/733_434c/6ce77a10dd3268daa7ba6c93e5e76459.jpg);" onclick="f1(1)">
+                        <span>专业英语</span>
+                    </div>
+                    <div style="background-image: url(https://p.ananas.chaoxing.com/star3/733_434c/474b686252ee9e6b4fd0ee7212b88c15.jpg);" onclick="f1(2)">
+                        <span>马克思主义基本原理</span>
+                    </div>
+                </li>
+
+
+
+            </ul>
+            <script src="../js/indexscontent.js"></script>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <footer>
+        <!-- 首页 -->
+        <a class="nav nav-shouye" href="">
+            <div class="icon" style="background-image: url(../images/index/nav/shouye-active.webp);"></div>
+            <span style="color: #43CF7C;">首页</span>
+        </a>
+        <!-- 首页 -->
+        <a class="nav nav-shouye" href="">
+            <div class="icon"></div>
+            <span>待定</span>
+        </a>
+        <!-- 首页 -->
+        <a class="nav nav-shouye" href="">
+            <div class="icon"></div>
+            <span>待定</span>
+        </a>
+        <!-- 关于 -->
+        <a class="nav nav-shouye" href="">
+            <div class="icon"></div>
+            <span>关于</span>
+        </a>
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <!-- 
+    <section>
+        <div class="coursebox" style="padding: 5%; box-sizing: border-box;">
+            <span>
+                &emsp;&emsp;当前为软件测试阶段，资源对外开放，若出现页面布局不兼容、跳转失败等异常情况请及时反馈具体问题。点击下载&nbsp;<a style="color: #fc80ff" href="https://XGStudio2023.github.io/download">信管帮APP</a>(安卓版)
+            </span>
+
+        </div>
+        
+
+        
+        <div class="modelbox">
+            <a href="https://sourl.cn/Mwckxm">专业英语</a>
+            <a href="../homeworks/html/mkszyjbyl/mkszyjbyl.html">马克思主义基本原理</a>
+            <a href="./editxck.html">行程卡</a>
+            
+        </div>
+        
+    </section>
+ -->
+
+    
+
+
+
+    <script>
+        //根据设备宽度计算html的font-size
+        function resetHtmlFont(){
+            //获取html对象并动态设置font-size = 设备宽度的1/10
+            document.documentElement.style.fontSize = screen.width/10 + 'px';
+        }
+        //执行一下
+        resetHtmlFont();
+        //如果窗口大小改变了，则重新计算基础font-size
+        window.onresize = resetHtmlFont;
+    </script>
+    <!-- 
+    <script>
+        //document.getElementsByClassName("item")[2].scrollIntoView({behavior:'smooth'})
+        //自动滚动
+        var n = document.getElementsByClassName("adContainer1").length //n 总图片数量
+        var t = 6000 //时间间隔
+        var number = 0
+
+        var adContainer2Color = ['linear-gradient(to top,#D9434D 0%,rgba(218, 67, 77, 0) 25%)','linear-gradient(to top,rgba(125, 19, 6, 1) 0%,rgba(125, 19, 6, 0) 25%)','linear-gradient(to top,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0)','linear-gradient(to top,rgba(38, 63, 0, 1) 0%,rgba(38, 63, 0, 0) 25%)','linear-gradient(to top,#4B4CD6 0%,rgba(75, 76, 214, 0) 25%)','linear-gradient(to top,#D9434D 0%,rgba(218, 67, 77, 0) 25%)']
+        var adContainer2Href = ['https://pro.m.jd.com/mall/active/4W28Z2kFoEnYPPttQJqqNNsc2s28/index.html?bd_vid=8800155284773407438','https://www.huat.edu.cn/','./editxck.html','http://sheqi.01ny.cn/index.php?m=content&c=index&a=show&catid=214&id=56107','./666','https://pro.m.jd.com/mall/active/4W28Z2kFoEnYPPttQJqqNNsc2s28/index.html?bd_vid=8800155284773407438']
+        var bodyColor = ['#D9434D','rgba(125, 19, 6, 1)','rgba(255, 255, 255, 1)','rgba(38, 63, 0, 1)','#4B4CD6','#D9434D']
+        
+        function f1(){
+            
+            
+            var adContainer1 = document.getElementsByClassName("adContainer1") //object
+            //主题颜色
+            var body = document.body
+            var adContainer2 = document.getElementsByClassName("adContainer2")[0]
+
+            if(number < n-1){
+                adContainer1[number].scrollIntoView({behavior:"smooth"})
+                switch(number){
+                    case 0:
+                    adContainer2.style.background=adContainer2Color[0];
+                    adContainer2.href=adContainer2Href[0];
+                    body.style.background=bodyColor[0];
+                    break;
+                    case 1:
+                    adContainer2.style.background=adContainer2Color[1];
+                    adContainer2.href=adContainer2Href[1];
+                    body.style.background=bodyColor[1];
+                    break;
+                    case 2:
+                    adContainer2.style.background=adContainer2Color[2];
+                    adContainer2.href=adContainer2Href[2];
+                    body.style.background=bodyColor[2];
+                    break;
+                    case 3:
+                    adContainer2.style.background=adContainer2Color[3];
+                    adContainer2.href=adContainer2Href[3];
+                    body.style.background=bodyColor[3];
+                    break;
+                    case 4:
+                    adContainer2.style.background=adContainer2Color[4];
+                    adContainer2.href=adContainer2Href[4];
+                    body.style.background=bodyColor[4];
+                    break;
+                    
+
+
+                }
+                number++
+               
+            }else{
+                adContainer1[number].scrollIntoView({behavior:"smooth"})
+                adContainer2.style.background=adContainer2Color[5];
+                adContainer2.href=adContainer2Href[5];
+                body.style.background=bodyColor[5];
+                    setTimeout(function(){
+                        adContainer1[0].scrollIntoView({behavior:"auto"})
+                        //adContainer2.style.background=Color[4];
+                    },t-80)
+                number = 1
+                
+                
+            }
+            
+        }
+
+        setInterval(f1,t)
+        f1()
+    </script>
+    <script>
+        /**/
+        var model1 = document.querySelector(".model1")
+        var model2 = document.querySelector(".model2")
+        var modelcontent = document.querySelector(".modelcontent")
+        
+        model2.style.borderBottom='none'
+        model2.style.color='rgba(174, 175, 183, 1)'
+        //model2.style.color='rgba(174, 175, 183, 1)'
+        model1.onclick = function (){
+            model1.style.borderBottom='.0966rem solid red'
+            //model1.style.color='#000'
+            //model2.style.color='rgba(174, 175, 183, 1)'
+            model2.style.borderBottom='none'
+        }
+        model2.onclick = function (){
+            model1.style.borderBottom='none'
+            //model1.style.color='rgba(174, 175, 183, 1)'
+            //model2.style.color='#000'
+            model2.style.borderBottom='.0966rem solid red'
+           
+        }
+        modelcontent.onscroll = function(){
+            var modelcontentscrollLeft = document.querySelector(".modelcontent").scrollLeft
+
+            //console.log("modelcontentscrollLeft: "+modelcontentscrollLeft)
+            if(modelcontentscrollLeft >= 10){
+                model1.style.borderBottom='none'
+                model2.style.borderBottom='.0966rem solid red'
+
+
+                model1.style.color='rgba(174, 175, 183, 1)'
+                model2.style.color='#000'
+            }else if(modelcontentscrollLeft >= 0 && modelcontentscrollLeft < 10){
+                model1.style.borderBottom='.0966rem solid red'
+                model2.style.borderBottom='none'
+
+
+                model1.style.color='#000'
+                model2.style.color='rgba(174, 175, 183, 1)'
+            }
+
+            /*
+            if(model2.style.borderBottom == ""){
+
+                model1.style.color='#000'
+                model2.style.color='rgba(174, 175, 183, 1)'
+            }else{
+                model1.style.color='rgba(174, 175, 183, 1)'
+                model2.style.color='#000'
+            }*/
+        }
+
+        
+
+    </script>
+     -->
+</body>
+</html>
