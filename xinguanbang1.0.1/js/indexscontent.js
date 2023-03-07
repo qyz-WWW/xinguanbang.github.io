@@ -9,10 +9,12 @@ function f1(i){
         var a = "../homeworks/html/"
         switch (i) {
             case 1:
-                window.location.replace("https://sourl.cn/Mwckxm");
+                //window.location.replace("https://sourl.cn/Mwckxm");
+                window.location.href="https://sourl.cn/Mwckxm"
                 break;
             case 2:
-                window.location.replace("../homeworks/html/mkszyjbyl/mkszyjbyl.html");
+                //window.location.replace("../homeworks/html/mkszyjbyl/mkszyjbyl.html");
+                window.location.href="../homeworks/html/mkszyjbyl/mkszyjbyl.html"
             break;
             default:
                 alert('位置错误！');
