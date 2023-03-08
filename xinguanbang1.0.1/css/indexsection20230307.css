@@ -13,8 +13,8 @@ section .condition{
     flex-direction: column;
 }
 .condition .top{
-    font-size: .314rem;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: .2899rem;
+    color: #ffffffab;
     display: flex;
     justify-content: space-between;
     margin: .1932rem 0rem;
@@ -23,9 +23,9 @@ section .condition{
 .condition .top .left{
     /**/
     width: fit-content;
-    height: .5797rem;
+    height: .5314rem;
     border-radius: .2899rem;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #ffffff29;
     display: flex;
     box-sizing: border-box;
     letter-spacing: .0242rem;
@@ -34,8 +34,8 @@ section .condition{
 }
 .condition .top .left .iconfwq{
     /**/
-    width: .4106rem;
-    height: .4106rem;
+    width: .3865rem;
+    height: .3865rem;
     background: url(../images/index/xinhaota.webp);
     background-repeat: no-repeat;
     background-size: contain;
@@ -45,12 +45,12 @@ section .condition{
 .condition .top .right{
     /**/
     width: fit-content;
-    height: .5797rem;
+    height: .5314rem;
     border-radius: .2899rem;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #ffffff29;
     box-sizing: border-box;
     padding: 0rem .2415rem;
-    line-height: .5797rem;
+    line-height: .5314rem;
 }
 #code1{
     /**/
@@ -109,7 +109,7 @@ section .condition{
     /*
     border: .0242rem solid rgb(200, 255, 0);*/
     border-radius: .1208rem;
-    width: 3.913rem;
+    width: 3.9614rem;
     height: 2.8502rem;
     display: flex;
     align-items: end;
@@ -123,8 +123,8 @@ section .condition{
     border-radius: 0rem 0rem .1208rem .1208rem;
     width: 100%;
     height: .628rem;
-    font-size: .3382rem;
-    letter-spacing: .0242rem;
+    font-size: .314rem;
+    letter-spacing: .0121rem;
     color: rgba(255, 255, 255, 1);
     text-align: center;
     line-height: .6039rem;
