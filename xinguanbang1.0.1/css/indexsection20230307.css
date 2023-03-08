@@ -112,14 +112,18 @@ section .condition{
     width: 3.9614rem;
     height: 2.8502rem;
     display: flex;
+    /**/
     align-items: end;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 .ul1 li div span{
     /*
     border: .0242rem solid rgb(200, 255, 0);*/
+    position: absolute;
+    bottom: 0rem;
     border-radius: 0rem 0rem .1208rem .1208rem;
     width: 100%;
     height: .628rem;
